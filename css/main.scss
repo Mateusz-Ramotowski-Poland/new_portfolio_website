@@ -1,1 +1,13 @@
+@use "breakpoints" as bp;
+@use "fonts";
 
+/* Below only for testing */
+header {
+  color: blue;
+  font-family: "Lato-Regular", sans-serif;
+
+  @include bp.lg {
+    color: red;
+  }
+}
+/* above only for testing */

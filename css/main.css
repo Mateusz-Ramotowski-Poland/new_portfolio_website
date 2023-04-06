@@ -1,1 +1,15 @@
-/*# sourceMappingURL=main.css.map */
+@font-face {
+  font-family: "Lato-Regular";
+  src: url("../fonts/Lato-Regular.ttf") format("truetype");
+} /* Below only for testing */
+header {
+  color: blue;
+  font-family: "Lato-Regular", sans-serif;
+}
+@media (min-width: 992px) {
+  header {
+    color: red;
+  }
+}
+
+/* above only for testing *//*# sourceMappingURL=main.css.map */
