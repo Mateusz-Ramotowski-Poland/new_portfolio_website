@@ -2,6 +2,16 @@
 @use "../breakpoints" as bp;
 @use "../extends";
 
+$header-font-size: 2.2rem;
+
+%link-header {
+  @extend %link;
+
+  &:hover {
+    color: co.$blue;
+  }
+}
+
 %burger-line {
   background: black;
   height: 0.2rem;
@@ -19,7 +29,7 @@
 .header {
   align-items: center;
   display: flex;
-  font-size: 2.2rem;
+  font-size: $header-font-size;
   min-height: 5rem;
   position: relative;
 }
@@ -39,9 +49,13 @@
     justify-content: space-between;
     width: 5rem;
 
+    & a {
+      height: $header-font-size;
+    }
+
     & ion-icon {
       color: black;
-      font-size: inherit;
+
       &:hover {
         color: co.$blue;
       }

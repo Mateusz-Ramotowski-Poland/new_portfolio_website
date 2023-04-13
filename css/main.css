@@ -43,9 +43,11 @@
   justify-content: space-between;
   width: 5rem;
 }
+.nav__icons a {
+  height: 2.2rem;
+}
 .nav__icons ion-icon {
   color: black;
-  font-size: inherit;
 }
 .nav__icons ion-icon:hover {
   color: #1b9eb1;
