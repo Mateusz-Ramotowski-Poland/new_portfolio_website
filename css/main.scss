@@ -1,22 +1,22 @@
-@use "breakpoints" as bp;
 @use "fonts";
 @use "sections/header";
 
-/* Below only for testing */
-/* header {
-  color: blue;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   font-family: "Lato-Regular", sans-serif;
+}
 
-  @include bp.lg {
-    color: red;
-  }
-} */ /* above only for testing */
-/* Below only for testing */
-/* ion-icon {
-  color: blue;
-  font-size: 20px;
-  &:hover {
-    color: red;
-  }
-} */
-/* above only for testing */
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 2rem;
+  font-size: 1.6rem;
+}
+
+li {
+  list-style: none;
+}

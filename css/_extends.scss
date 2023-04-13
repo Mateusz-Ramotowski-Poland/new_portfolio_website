@@ -1,0 +1,17 @@
+@use "colors" as co;
+
+%link {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+%link-header {
+  @extend %link;
+
+  &:hover {
+    color: co.$blue;
+  }
+}

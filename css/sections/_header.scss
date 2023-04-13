@@ -1,53 +1,51 @@
 @use "../colors" as co;
 @use "../breakpoints" as bp;
-@use "../mixins" as mi;
-/* below only for testing */
-/* header {
-  font-family: "Lato-Regular", sans-serif;
+@use "../extends";
+
+%burger-line {
+  background: black;
+  height: 0.2rem;
+  transition: all 0.3s ease;
+  width: 3rem;
 }
 
-.nav__li__link {
-  text-decoration: none;
-  color: black;
-  &:hover {
-    color: c.$blue;
-    cursor: pointer;
-  }
-} */
-
-ion-icon {
-  color: black;
-  font-size: 20px;
-  &:hover {
-    color: co.$blue;
-  }
+@mixin burger-top-bottom($top: 0.8rem) {
+  content: "";
+  left: 0;
+  position: absolute;
+  top: $top;
 }
-/* above only for testing */
+
 .header {
-  display: flex; /* Why I need this line? */
-  /* width: 100%;  */ /* Do I need this line? */
+  align-items: center;
+  display: flex;
+  font-size: 2.2rem;
+  min-height: 5rem;
   position: relative;
 }
 
 .nav {
   display: flex;
-  width: 100%;
   justify-content: space-between;
-  padding: 0.7em 1.8rem 0.6rem 1.8rem; /* Change padding values? */
-
-  @include bp.xlg {
-    padding: 2rem 2rem; /* Change padding values? */
-  }
+  width: 100%;
 
   &__links {
-    display: flex; /* Why I need this line? */
+    display: flex;
   }
 
   &__icons {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: space-between;
-    width: 50px; /* Why I should use REM instead of px? */
+    width: 5rem;
+
+    & ion-icon {
+      color: black;
+      font-size: inherit;
+      &:hover {
+        color: co.$blue;
+      }
+    }
   }
 
   &__burger {
@@ -55,105 +53,64 @@ ion-icon {
     border: none;
     cursor: pointer;
 
+    @include bp.lg {
+      display: none;
+    }
+
     &.active & {
       &__line {
         background: transparent;
 
         &::before {
-          transform: rotate(45deg);
           top: 0;
+          transform: rotate(45deg);
         }
 
         &::after {
-          transform: rotate(-45deg);
           top: 0;
+          transform: rotate(-45deg);
         }
       }
     }
 
     &.active ~ .nav__ul {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
+      background: white;
+      display: block;
       position: absolute;
-      top: 86px;
-      z-index: 2;
-      left: 0;
-      margin-top: -2rem;
-      outline: 10px solid #ffffff;
-      padding: 3.1rem 0;
-
-      @include bp.lg {
-        position: unset;
-      }
-    }
-
-    @include bp.lg {
-      display: none;
+      text-align: center;
+      top: 5.4rem;
+      width: 100%;
     }
 
     &__line {
-      transition: all 0.3s ease;
-      width: 3rem;
-      height: 0.2rem;
-      background: black;
-      margin: 0.5rem 0;
+      @extend %burger-line;
       position: relative;
 
       &::before {
-        transition: all 0.3s ease;
-        content: "";
-        position: absolute;
-        width: 3rem;
-        height: 0.2rem;
-        background: black;
-        top: -0.8rem;
-        left: 0;
+        @extend %burger-line;
+        @include burger-top-bottom;
       }
 
       &::after {
-        transition: all 0.3s ease;
-        content: "";
-        position: absolute;
-        width: 3rem;
-        height: 0.2rem;
-        background: black;
-        top: 0.8rem;
-        left: 0;
+        @extend %burger-line;
+        @include burger-top-bottom($top: -0.8rem);
       }
     }
   }
 
   &__ul {
     display: none;
-    font-size: 1.8rem;
-    background: white;
 
     @include bp.lg {
-      padding-left: 2rem;
       display: flex;
-      align-items: center;
-    }
-
-    @include bp.lg {
-      padding-left: 6rem;
-    }
-
-    @include bp.xxlg {
-      padding-left: 10rem;
-      padding-bottom: 0;
-      padding-left: 19rem;
     }
   }
 
   &__li {
-    list-style: none;
-    padding: 1rem 1rem;
+    padding: 0.5rem;
 
     &__link {
-      @include mi.nav__li__link;
+      @extend %link-header;
     }
   }
 }
