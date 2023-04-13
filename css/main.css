@@ -1,15 +1,180 @@
 @font-face {
   font-family: "Lato-Regular";
   src: url("../fonts/Lato-Regular.ttf") format("truetype");
-} /* Below only for testing */
-header {
-  color: blue;
+} /* below only for testing */
+/* header {
   font-family: "Lato-Regular", sans-serif;
 }
-@media (min-width: 992px) {
-  header {
-    color: red;
+
+.nav__li__link {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    color: c.$blue;
+    cursor: pointer;
   }
+} */
+ion-icon {
+  color: black;
+  font-size: 20px;
+}
+ion-icon:hover {
+  color: #1b9eb1;
 }
 
+/* above only for testing */
+.header {
+  display: flex; /* Why I need this line? */
+  /* width: 100%;  */ /* Do I need this line? */
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0.7em 1.8rem 0.6rem 1.8rem; /* Change padding values? */
+}
+@media (min-width: 1200px) {
+  .nav {
+    padding: 2rem 2rem; /* Change padding values? */
+  }
+}
+.nav__links {
+  display: flex; /* Why I need this line? */
+}
+.nav__icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50px; /* Why I should use REM instead of px? */
+}
+.nav__burger {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.nav__burger.active .nav__burger__line {
+  background: transparent;
+}
+.nav__burger.active .nav__burger__line::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+.nav__burger.active .nav__burger__line::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.nav__burger.active ~ .nav__ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 86px;
+  z-index: 2;
+  left: 0;
+  margin-top: -2rem;
+  outline: 10px solid #ffffff;
+  padding: 3.1rem 0;
+}
+@media (min-width: 992px) {
+  .nav__burger.active ~ .nav__ul {
+    position: unset;
+  }
+}
+@media (min-width: 992px) {
+  .nav__burger {
+    display: none;
+  }
+}
+.nav__burger__line {
+  transition: all 0.3s ease;
+  width: 3rem;
+  height: 0.2rem;
+  background: black;
+  margin: 0.5rem 0;
+  position: relative;
+}
+.nav__burger__line::before {
+  transition: all 0.3s ease;
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: 0.2rem;
+  background: black;
+  top: -0.8rem;
+  left: 0;
+}
+.nav__burger__line::after {
+  transition: all 0.3s ease;
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: 0.2rem;
+  background: black;
+  top: 0.8rem;
+  left: 0;
+}
+.nav__ul {
+  display: none;
+  font-size: 1.8rem;
+  background: white;
+}
+@media (min-width: 992px) {
+  .nav__ul {
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 992px) {
+  .nav__ul {
+    padding-left: 6rem;
+  }
+}
+@media (min-width: 1440px) {
+  .nav__ul {
+    padding-left: 10rem;
+    padding-bottom: 0;
+    padding-left: 19rem;
+  }
+}
+.nav__li {
+  list-style: none;
+  padding: 1rem 1rem;
+}
+.nav__li__link {
+  text-decoration: none;
+  color: black;
+  white-space: normal;
+  font-family: "Poppins-Medium", sans-serif;
+}
+@media (min-width: 992px) {
+  .nav__li__link {
+    white-space: nowrap;
+  }
+}
+.nav__li__link:hover {
+  color: #1b9eb1;
+}
+
+/* Below only for testing */
+/* header {
+  color: blue;
+  font-family: "Lato-Regular", sans-serif;
+
+  @include bp.lg {
+    color: red;
+  }
+} */ /* above only for testing */
+/* Below only for testing */
+/* ion-icon {
+  color: blue;
+  font-size: 20px;
+  &:hover {
+    color: red;
+  }
+} */
 /* above only for testing *//*# sourceMappingURL=main.css.map */

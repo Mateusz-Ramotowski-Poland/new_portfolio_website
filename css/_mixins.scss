@@ -1,0 +1,17 @@
+@use "breakpoints" as bp;
+@use "colors" as co;
+
+@mixin nav__li__link {
+  text-decoration: none;
+  color: black;
+  white-space: normal;
+  font-family: "Poppins-Medium", sans-serif;
+
+  @include bp.lg {
+    white-space: nowrap;
+  }
+
+  &:hover {
+    color: co.$blue;
+  }
+}

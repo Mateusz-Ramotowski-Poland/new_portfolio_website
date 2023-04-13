@@ -1,0 +1,159 @@
+@use "../colors" as co;
+@use "../breakpoints" as bp;
+@use "../mixins" as mi;
+/* below only for testing */
+/* header {
+  font-family: "Lato-Regular", sans-serif;
+}
+
+.nav__li__link {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    color: c.$blue;
+    cursor: pointer;
+  }
+} */
+
+ion-icon {
+  color: black;
+  font-size: 20px;
+  &:hover {
+    color: co.$blue;
+  }
+}
+/* above only for testing */
+.header {
+  display: flex; /* Why I need this line? */
+  /* width: 100%;  */ /* Do I need this line? */
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0.7em 1.8rem 0.6rem 1.8rem; /* Change padding values? */
+
+  @include bp.xlg {
+    padding: 2rem 2rem; /* Change padding values? */
+  }
+
+  &__links {
+    display: flex; /* Why I need this line? */
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50px; /* Why I should use REM instead of px? */
+  }
+
+  &__burger {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &.active & {
+      &__line {
+        background: transparent;
+
+        &::before {
+          transform: rotate(45deg);
+          top: 0;
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+          top: 0;
+        }
+      }
+    }
+
+    &.active ~ .nav__ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      position: absolute;
+      top: 86px;
+      z-index: 2;
+      left: 0;
+      margin-top: -2rem;
+      outline: 10px solid #ffffff;
+      padding: 3.1rem 0;
+
+      @include bp.lg {
+        position: unset;
+      }
+    }
+
+    @include bp.lg {
+      display: none;
+    }
+
+    &__line {
+      transition: all 0.3s ease;
+      width: 3rem;
+      height: 0.2rem;
+      background: black;
+      margin: 0.5rem 0;
+      position: relative;
+
+      &::before {
+        transition: all 0.3s ease;
+        content: "";
+        position: absolute;
+        width: 3rem;
+        height: 0.2rem;
+        background: black;
+        top: -0.8rem;
+        left: 0;
+      }
+
+      &::after {
+        transition: all 0.3s ease;
+        content: "";
+        position: absolute;
+        width: 3rem;
+        height: 0.2rem;
+        background: black;
+        top: 0.8rem;
+        left: 0;
+      }
+    }
+  }
+
+  &__ul {
+    display: none;
+    font-size: 1.8rem;
+    background: white;
+
+    @include bp.lg {
+      padding-left: 2rem;
+      display: flex;
+      align-items: center;
+    }
+
+    @include bp.lg {
+      padding-left: 6rem;
+    }
+
+    @include bp.xxlg {
+      padding-left: 10rem;
+      padding-bottom: 0;
+      padding-left: 19rem;
+    }
+  }
+
+  &__li {
+    list-style: none;
+    padding: 1rem 1rem;
+
+    &__link {
+      @include mi.nav__li__link;
+    }
+  }
+}
