@@ -133,7 +133,6 @@
 .hero__container {
   bottom: 11rem;
   color: white;
-  letter-spacing: 0.2rem;
   max-width: 100%;
   padding-left: 1rem;
   position: absolute;
@@ -141,14 +140,12 @@
 }
 @media (min-width: 576px) {
   .hero__container {
-    letter-spacing: 0.4rem;
     max-width: 28rem;
     right: 23.5rem;
   }
 }
 @media (min-width: 768px) {
   .hero__container {
-    letter-spacing: 0.7rem;
     max-width: 43rem;
     right: 25rem;
   }
@@ -176,16 +173,19 @@
 }
 .hero__container h1 {
   font-size: 3.2rem;
+  letter-spacing: 0.2rem;
   margin-bottom: 2rem;
 }
 @media (min-width: 576px) {
   .hero__container h1 {
     font-size: 4rem;
+    letter-spacing: 0.4rem;
   }
 }
 @media (min-width: 768px) {
   .hero__container h1 {
     font-size: 5rem;
+    letter-spacing: 0.7rem;
   }
 }
 @media (min-width: 992px) {
@@ -200,6 +200,7 @@
 }
 .hero__container p {
   font-size: 2.5rem;
+  letter-spacing: 0.2rem;
 }
 @media (min-width: 992px) {
   .hero__container p {
