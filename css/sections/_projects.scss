@@ -1,0 +1,19 @@
+@use "../breakpoints" as bp;
+@use "../colors" as c;
+
+.projects__container {
+  display: grid;
+  gap: 2rem;
+  /* grid-template-columns: 30rem 30rem 30rem 30rem; */
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  margin-bottom: 5rem;
+
+  &__item {
+    align-items: center;
+    border: 2px solid c.$blue;
+    display: flex;
+    font-style: italic;
+    height: 30rem;
+    justify-content: center;
+  }
+}

@@ -1,6 +1,8 @@
 @use "fonts";
+@use "sections/about";
 @use "sections/header";
 @use "sections/hero";
+@use "sections/projects";
 
 * {
   padding: 0;

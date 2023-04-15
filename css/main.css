@@ -2,6 +2,10 @@
   font-family: "Lato-Regular";
   src: url("../fonts/Lato-Regular.ttf") format("truetype");
 }
+.about {
+  margin-bottom: 5rem;
+}
+
 .nav__li__link {
   text-decoration: none;
   color: black;
@@ -113,6 +117,7 @@
   background-size: cover;
   background-position: 83.5% 0%;
   height: 90rem;
+  margin-bottom: 5rem;
   position: relative;
 }
 @media (min-width: 576px) {
@@ -211,6 +216,22 @@
   .hero__container p {
     font-size: 4.2rem;
   }
+}
+
+.projects__container {
+  display: grid;
+  gap: 2rem;
+  /* grid-template-columns: 30rem 30rem 30rem 30rem; */
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  margin-bottom: 5rem;
+}
+.projects__container__item {
+  align-items: center;
+  border: 2px solid #1b9eb1;
+  display: flex;
+  font-style: italic;
+  height: 30rem;
+  justify-content: center;
 }
 
 * {
