@@ -5,10 +5,11 @@
 @use "sections/projects";
 
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
   font-family: "Lato-Regular", sans-serif;
+  font-size: inherit;
+  padding: 0;
+  margin: 0;
 }
 
 :root {
@@ -17,7 +18,7 @@
 
 body {
   margin: 2rem;
-  font-size: 1.6rem;
+  font-size: 2.2rem;
 }
 
 li {
