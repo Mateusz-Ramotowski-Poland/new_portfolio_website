@@ -1,6 +1,8 @@
 @use "../breakpoints" as bp;
 @use "../colors" as c;
 
+$link-height: 4rem;
+
 @mixin link {
   align-items: center;
   background-color: c.$blue;
@@ -8,7 +10,7 @@
   bottom: 0;
   color: white;
   display: flex;
-  height: 4rem;
+  height: $link-height;
   font-size: 2.5rem;
   font-style: normal;
   justify-content: center;
@@ -25,8 +27,7 @@
 .projects__container {
   display: grid;
   gap: 2rem;
-  /* grid-template-columns: 30rem 30rem 30rem 30rem; */
-  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
   margin-bottom: 5rem;
 
   &__item {
@@ -34,8 +35,9 @@
     border: 2px solid c.$blue;
     display: flex;
     font-style: italic;
-    height: 30rem;
+    height: 23rem;
     justify-content: center;
+    padding-bottom: $link-height;
     position: relative;
 
     &__link-description {
@@ -55,7 +57,7 @@
 
     &__title {
       color: c.$blue;
-      font-size: 3rem;
+      font-size: 3.5rem;
       letter-spacing: 0.5rem;
       text-align: center;
     }
