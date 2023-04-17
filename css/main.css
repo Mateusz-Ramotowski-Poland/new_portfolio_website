@@ -219,19 +219,42 @@
 }
 
 .projects__container {
-  display: grid;
+  display: flex;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
   margin-bottom: 5rem;
+  overflow-x: auto;
+  padding-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .projects__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  }
+}
+@media (min-width: 1440px) {
+  .projects__container {
+    grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
+  }
+}
+.projects__container::-webkit-scrollbar {
+  width: 12px;
+}
+.projects__container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(27, 158, 177, 0.3);
+  border-radius: 10px;
+}
+.projects__container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(27, 158, 177, 0.5);
 }
 .projects__container__item {
   align-items: center;
-  border: 2px solid #1b9eb1;
+  border: 0.2rem solid #1b9eb1;
   display: flex;
   font-style: italic;
   height: 23rem;
   justify-content: center;
-  padding-bottom: 4rem;
+  padding: 0 1rem 4rem 1rem;
   position: relative;
 }
 .projects__container__item__link-description {
@@ -242,12 +265,18 @@
   color: white;
   display: flex;
   height: 4rem;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-style: normal;
   justify-content: center;
   position: absolute;
+  text-decoration: none;
   width: 50%;
   right: 0;
+}
+@media (min-width: 1440px) {
+  .projects__container__item__link-description {
+    font-size: 2.5rem;
+  }
 }
 .projects__container__item__link-description:hover {
   background-color: #065f6c;
@@ -262,12 +291,18 @@
   color: white;
   display: flex;
   height: 4rem;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-style: normal;
   justify-content: center;
   position: absolute;
+  text-decoration: none;
   width: 50%;
   width: 100%;
+}
+@media (min-width: 1440px) {
+  .projects__container__item__link-description--wide {
+    font-size: 2.5rem;
+  }
 }
 .projects__container__item__link-description--wide:hover {
   background-color: #065f6c;
@@ -282,12 +317,18 @@
   color: white;
   display: flex;
   height: 4rem;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-style: normal;
   justify-content: center;
   position: absolute;
+  text-decoration: none;
   width: 50%;
   left: 0;
+}
+@media (min-width: 1440px) {
+  .projects__container__item__link-live {
+    font-size: 2.5rem;
+  }
 }
 .projects__container__item__link-live:hover {
   background-color: #065f6c;
@@ -296,9 +337,21 @@
 }
 .projects__container__item__title {
   color: #1b9eb1;
-  font-size: 3.5rem;
-  letter-spacing: 0.5rem;
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem;
   text-align: center;
+  width: 20rem;
+}
+@media (min-width: 768px) {
+  .projects__container__item__title {
+    width: 100%;
+  }
+}
+@media (min-width: 1440px) {
+  .projects__container__item__title {
+    font-size: 3.5rem;
+    letter-spacing: 0.5rem;
+  }
 }
 
 * {
