@@ -227,15 +227,36 @@
   }
 }
 
-.projects__description {
-  line-height: 130%;
-  max-width: 120rem;
+.projects {
+  display: block;
 }
-
+@media (min-width: 992px) {
+  .projects {
+    display: grid;
+    grid-template-areas: "title title" "description menu" "projects projects";
+    grid-template-columns: 50rem 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  .projects {
+    grid-template-columns: 60rem 1fr;
+  }
+}
+@media (min-width: 1440px) {
+  .projects {
+    grid-template-columns: 90rem 1fr;
+  }
+}
+@media (min-width: 1920px) {
+  .projects {
+    grid-template-columns: 95rem 1fr;
+  }
+}
 .projects__container {
   display: flex;
   gap: 2rem;
-  margin: 2rem 0 10rem 0;
+  grid-area: projects;
+  margin: 1rem 0 10rem 0;
   overflow-x: auto;
   padding-bottom: 2rem;
 }
@@ -270,6 +291,7 @@
   justify-content: center;
   padding: 0 1rem 4rem 1rem;
   position: relative;
+  transition: all 1s linear;
 }
 .projects__container__item__link-description {
   align-items: center;
@@ -367,13 +389,40 @@
     letter-spacing: 0.5rem;
   }
 }
-.projects__container__item:nth-child(6) {
-  background-image: url("../../images/portfolio-6.PNG");
-  background-size: 100% 100%;
+.projects__description {
+  grid-area: description;
+  line-height: 130%;
+  margin-bottom: 2rem;
 }
-.projects__container__item:nth-child(7) {
-  background-image: url("../../images/portfolio-7.PNG");
-  background-size: 100% 100%;
+@media (min-width: 992px) {
+  .projects__description {
+    padding-right: 3rem;
+  }
+}
+.projects__menu {
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: menu;
+}
+.projects__menu__button {
+  background-color: #1b9eb1;
+  border-radius: 10%;
+  border: 2px solid white;
+  color: white;
+  padding: 1rem;
+  margin: 0 1rem 1rem 0;
+  box-shadow: 0px 4px 15px rgba(59, 161, 197, 0.7);
+}
+@media (min-width: 576px) {
+  .projects__menu__button {
+    margin: 0 2rem 1rem 0;
+  }
+}
+.projects__menu__button:hover {
+  cursor: pointer;
+}
+.projects__title {
+  grid-area: title;
 }
 
 .testimonials {
@@ -390,6 +439,14 @@
 
 :root {
   font-size: 62.5%;
+}
+
+.hidden {
+  display: none;
+}
+
+.visually-hidden {
+  opacity: 0;
 }
 
 body {

@@ -15,6 +15,14 @@
   font-size: 62.5%;
 }
 
+.hidden {
+  display: none;
+}
+
+.visually-hidden {
+  opacity: 0;
+}
+
 body {
   margin: 2rem;
   font-size: 2rem;
