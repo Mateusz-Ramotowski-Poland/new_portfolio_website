@@ -3,7 +3,11 @@
   src: url("../fonts/Lato-Regular.ttf") format("truetype");
 }
 .about {
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
+}
+
+.contact {
+  margin-bottom: 10rem;
 }
 
 .nav__li__link {
@@ -117,7 +121,7 @@
   background-size: cover;
   background-position: 83.5% 0%;
   height: 90rem;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
   position: relative;
 }
 @media (min-width: 576px) {
@@ -221,7 +225,7 @@
 .projects__container {
   display: flex;
   gap: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
   overflow-x: auto;
   padding-bottom: 2rem;
 }
@@ -353,6 +357,18 @@
     letter-spacing: 0.5rem;
   }
 }
+.projects__container__item:nth-child(6) {
+  background-image: url("../../images/portfolio-6.PNG");
+  background-size: 100% 100%;
+}
+.projects__container__item:nth-child(7) {
+  background-image: url("../../images/portfolio-7.PNG");
+  background-size: 100% 100%;
+}
+
+.testimonials {
+  margin-bottom: 10rem;
+}
 
 * {
   box-sizing: border-box;
@@ -369,6 +385,18 @@
 body {
   margin: 2rem;
   font-size: 2.2rem;
+}
+
+h2 {
+  color: #065f6c;
+  font-size: 3.6rem;
+  letter-spacing: 0.5rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 576px) {
+  h2 {
+    font-size: 4.5rem;
+  }
 }
 
 li {

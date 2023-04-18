@@ -1,5 +1,6 @@
 @use "../breakpoints" as bp;
 @use "../colors" as c;
+@use "variables" as v;
 
 $link-height: 4rem;
 $item-width-big: 26rem;
@@ -32,7 +33,7 @@ $item-width-small: 20rem;
 .projects__container {
   display: flex;
   gap: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: v.$section-margin-bottom;
   overflow-x: auto;
   padding-bottom: 2rem;
   @include bp.md {
@@ -95,6 +96,15 @@ $item-width-small: 20rem;
         font-size: 3.5rem;
         letter-spacing: 0.5rem;
       }
+    }
+
+    &:nth-child(6) {
+      background-image: url("../../images/portfolio-6.PNG");
+      background-size: 100% 100%;
+    }
+    &:nth-child(7) {
+      background-image: url("../../images/portfolio-7.PNG");
+      background-size: 100% 100%;
     }
   }
 }

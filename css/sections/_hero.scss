@@ -1,11 +1,12 @@
 @use "../breakpoints" as bp;
+@use "variables" as v;
 
 .hero {
   background: no-repeat url("../../images/hero.jpg");
   background-size: cover;
   background-position: 83.5% 0%;
   height: 90rem;
-  margin-bottom: 5rem;
+  margin-bottom: v.$section-margin-bottom;
   position: relative;
   @include bp.sm {
     background-position: 80% 30%;
