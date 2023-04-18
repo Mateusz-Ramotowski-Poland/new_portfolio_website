@@ -30,10 +30,15 @@ $item-width-small: 20rem;
   }
 }
 
+.projects__description {
+  line-height: 130%;
+  max-width: 120rem;
+}
+
 .projects__container {
   display: flex;
   gap: 2rem;
-  margin-bottom: v.$section-margin-bottom;
+  margin: 2rem 0 v.$section-margin-bottom 0;
   overflow-x: auto;
   padding-bottom: 2rem;
   @include bp.md {

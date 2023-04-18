@@ -2,7 +2,7 @@
 @use "../breakpoints" as bp;
 @use "../extends";
 
-$header-font-size: 2.2rem;
+$header-font-size: inherit;
 
 %link-header {
   @extend %link;
@@ -46,7 +46,10 @@ $header-font-size: 2.2rem;
     align-items: center;
     display: flex;
     justify-content: space-between;
-    width: 5rem;
+    width: 4.5rem;
+    @include bp.sm {
+      width: 5.5rem;
+    }
 
     & a {
       height: $header-font-size;

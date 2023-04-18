@@ -32,7 +32,7 @@
 .header {
   align-items: center;
   display: flex;
-  font-size: 2.2rem;
+  font-size: inherit;
   min-height: 5rem;
   position: relative;
 }
@@ -49,10 +49,15 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  width: 5rem;
+  width: 4.5rem;
+}
+@media (min-width: 576px) {
+  .nav__icons {
+    width: 5.5rem;
+  }
 }
 .nav__icons a {
-  height: 2.2rem;
+  height: inherit;
 }
 .nav__icons ion-icon {
   color: black;
@@ -222,10 +227,15 @@
   }
 }
 
+.projects__description {
+  line-height: 130%;
+  max-width: 120rem;
+}
+
 .projects__container {
   display: flex;
   gap: 2rem;
-  margin-bottom: 10rem;
+  margin: 2rem 0 10rem 0;
   overflow-x: auto;
   padding-bottom: 2rem;
 }
@@ -384,7 +394,12 @@
 
 body {
   margin: 2rem;
-  font-size: 2.2rem;
+  font-size: 2rem;
+}
+@media (min-width: 576px) {
+  body {
+    font-size: 2.5rem;
+  }
 }
 
 h2 {
