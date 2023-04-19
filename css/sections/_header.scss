@@ -1,8 +1,7 @@
 @use "../colors" as co;
 @use "../breakpoints" as bp;
 @use "../extends";
-
-$header-font-size: inherit;
+@use "../mixins" as mi;
 
 %link-header {
   @extend %link;
@@ -28,7 +27,7 @@ $header-font-size: inherit;
 .header {
   align-items: center;
   display: flex;
-  font-size: $header-font-size;
+  font-size: inherit;
   min-height: 5rem;
   position: relative;
 }
@@ -43,24 +42,7 @@ $header-font-size: inherit;
   }
 
   &__icons {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    width: 4.5rem;
-    @include bp.sm {
-      width: 5.5rem;
-    }
-
-    & a {
-      height: $header-font-size;
-    }
-
-    & ion-icon {
-      color: black;
-      &:hover {
-        color: co.$blue;
-      }
-    }
+    @include mi.icons;
   }
 
   &__burger {

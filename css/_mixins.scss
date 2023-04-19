@@ -1,0 +1,23 @@
+@use "breakpoints" as bp;
+@use "colors" as co;
+
+@mixin icons($anchorHeight: inherit, $width: 4.5rem) {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: $width;
+  @include bp.sm {
+    width: $width + 1rem;
+  }
+
+  & a {
+    height: $anchorHeight;
+  }
+
+  & ion-icon {
+    color: black;
+    &:hover {
+      color: co.$blue;
+    }
+  }
+}

@@ -10,6 +10,41 @@
   margin-bottom: 10rem;
 }
 
+.footer {
+  align-items: center;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: space-between;
+}
+@media (min-width: 576px) {
+  .footer {
+    font-size: 2rem;
+  }
+}
+.footer__description {
+  margin-right: 1rem;
+}
+.footer__icons {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 3.7rem;
+}
+@media (min-width: 576px) {
+  .footer__icons {
+    width: 4.7rem;
+  }
+}
+.footer__icons a {
+  height: inherit;
+}
+.footer__icons ion-icon {
+  color: black;
+}
+.footer__icons ion-icon:hover {
+  color: #1b9eb1;
+}
+
 .nav__li__link {
   text-decoration: none;
   color: black;
