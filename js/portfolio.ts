@@ -27,7 +27,7 @@ function showAllProjects() {
     for (const project of arr) {
       project.classList.remove("hidden");
       setTimeout(function () {
-        project.classList.remove("visually-hidden");
+        project.classList.remove("my-visually-hidden");
       }, 20);
     }
   }
@@ -46,13 +46,13 @@ function showSelectedProjectsHideOthers(event) {
       for (const project of allProjects[i]) {
         project.classList.remove("hidden");
         setTimeout(function () {
-          project.classList.remove("visually-hidden");
+          project.classList.remove("my-visually-hidden");
         }, 20);
       }
     } else {
       for (const project of allProjects[i]) {
         if (!project.classList.contains("hidden")) {
-          project.classList.add("visually-hidden");
+          project.classList.add("my-visually-hidden");
           project.addEventListener("transitionend", hideElement);
         }
       }

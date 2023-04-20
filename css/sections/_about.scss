@@ -1,5 +1,5 @@
-@use "variables" as v;
+@use "variables" as va;
 
 .about {
-  margin-bottom: v.$section-margin-bottom;
+  margin-bottom: va.$section-margin-bottom;
 }

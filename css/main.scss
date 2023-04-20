@@ -1,5 +1,5 @@
 @use "breakpoints" as bp;
-@use "colors" as c;
+@use "colors" as co;
 @use "fonts";
 @use "sections/index";
 
@@ -19,20 +19,31 @@
   display: none;
 }
 
-.visually-hidden {
+.my-visually-hidden {
   opacity: 0;
 }
 
 body {
-  margin: 2rem;
+  margin: 1rem;
   font-size: 2rem;
   @include bp.sm {
     font-size: 2.5rem;
+    margin: 2rem;
   }
 }
 
+h1,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 h2 {
-  color: c.$blue-darker;
+  color: co.$blue-darker;
   font-size: 3.6rem;
   letter-spacing: 0.5rem;
   margin-bottom: 2rem;

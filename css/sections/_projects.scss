@@ -1,6 +1,6 @@
 @use "../breakpoints" as bp;
-@use "../colors" as c;
-@use "variables" as v;
+@use "../colors" as co;
+@use "variables" as va;
 
 $link-height: 4rem;
 $item-width-big: 26rem;
@@ -8,7 +8,7 @@ $item-width-small: 20rem;
 
 @mixin link {
   align-items: center;
-  background-color: c.$blue;
+  background-color: co.$blue;
   border: none;
   bottom: 0;
   color: white;
@@ -24,7 +24,7 @@ $item-width-small: 20rem;
     font-size: 2.5rem;
   }
   &:hover {
-    background-color: c.$blue-darker;
+    background-color: co.$blue-darker;
     cursor: pointer;
     text-decoration: underline;
   }
@@ -54,7 +54,7 @@ $item-width-small: 20rem;
     display: flex;
     gap: 2rem;
     grid-area: projects;
-    margin: 1rem 0 v.$section-margin-bottom 0;
+    margin: 1rem 0 va.$section-margin-bottom 0;
     overflow-x: auto;
     padding-bottom: 2rem;
     @include bp.md {
@@ -70,18 +70,18 @@ $item-width-small: 20rem;
     }
 
     &::-webkit-scrollbar-track {
-      -webkit-box-shadow: inset 0 0 6px rgba(c.$blue, 0.3);
+      -webkit-box-shadow: inset 0 0 6px rgba(co.$blue, 0.3);
       border-radius: 10px;
     }
 
     &::-webkit-scrollbar-thumb {
       border-radius: 10px;
-      -webkit-box-shadow: inset 0 0 6px rgba(c.$blue, 0.5);
+      -webkit-box-shadow: inset 0 0 6px rgba(co.$blue, 0.5);
     }
 
     &__item {
       align-items: center;
-      border: 0.2rem solid c.$blue;
+      border: 0.2rem solid co.$blue;
       display: flex;
       font-style: italic;
       height: 23rem;
@@ -106,7 +106,7 @@ $item-width-small: 20rem;
       }
 
       &__title {
-        color: c.$blue;
+        color: co.$blue;
         font-size: 2.5rem;
         letter-spacing: 0.2rem;
         text-align: center;
@@ -137,7 +137,7 @@ $item-width-small: 20rem;
     grid-area: menu;
 
     &__button {
-      background-color: c.$blue;
+      background-color: co.$blue;
       border-radius: 10%;
       border: 2px solid white;
       color: white;
