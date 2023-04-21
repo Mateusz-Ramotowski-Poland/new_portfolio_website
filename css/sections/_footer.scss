@@ -4,6 +4,7 @@
 .footer {
   align-items: center;
   display: flex;
+  flex-direction: column-reverse;
   font-size: 1.5rem;
   justify-content: space-between;
   @include bp.sm {
@@ -11,7 +12,7 @@
   }
 
   &__description {
-    margin-right: 1rem;
+    text-align: center;
   }
 
   &__icons {
