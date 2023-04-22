@@ -21,3 +21,13 @@
     }
   }
 }
+
+@mixin img-circle {
+  border-radius: 50%;
+  height: 20rem;
+  width: 20rem;
+  @include bp.sm {
+    height: 30rem;
+    width: 30rem;
+  }
+}

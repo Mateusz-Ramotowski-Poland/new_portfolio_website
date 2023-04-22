@@ -8,7 +8,37 @@ $blue-darker: #1155ad; */
   src: url("../fonts/Lato-Regular.ttf") format("truetype");
 }
 .about {
+  display: grid;
+  grid-template-areas: "title title title" "description photo technologies";
+  grid-template-columns: 140rem 1fr 1fr;
   margin-bottom: 10rem;
+}
+.abouth2 {
+  grid-area: title;
+}
+.about__description {
+  grid-area: description;
+}
+.about__description p {
+  line-height: 140%;
+  margin-bottom: 1rem;
+}
+.about__photo {
+  grid-area: photo;
+}
+.about__photo img {
+  border-radius: 50%;
+  height: 20rem;
+  width: 20rem;
+}
+@media (min-width: 576px) {
+  .about__photo img {
+    height: 30rem;
+    width: 30rem;
+  }
+}
+.about__technologies {
+  grid-area: technologies;
 }
 
 .contact {
@@ -535,8 +565,8 @@ $blue-darker: #1155ad; */
 .testimonials__carousel__opinion__img {
   border-radius: 50%;
   height: 20rem;
-  margin-bottom: 2.5rem;
   width: 20rem;
+  margin-bottom: 2.5rem;
 }
 @media (min-width: 576px) {
   .testimonials__carousel__opinion__img {

@@ -1,6 +1,7 @@
 @use "../breakpoints" as bp;
 @use "../colors" as co;
 @use "../extends";
+@use "../mixins" as mi;
 @use "variables" as va;
 
 %carousel-icon {
@@ -53,14 +54,8 @@
       }
 
       &__img {
-        border-radius: 50%;
-        height: 20rem;
+        @include mi.img-circle;
         margin-bottom: 2.5rem;
-        width: 20rem;
-        @include bp.sm {
-          height: 30rem;
-          width: 30rem;
-        }
       }
 
       &__job {
