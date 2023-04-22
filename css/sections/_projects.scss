@@ -144,6 +144,10 @@ $item-width-small: 20rem;
       padding: 1rem;
       margin: 0 1rem 1rem 0;
       box-shadow: 0px 4px 15px rgba(59, 161, 197, 0.7);
+      &:hover {
+        background-color: co.$blue-darker;
+        text-decoration: underline;
+      }
       @include bp.sm {
         margin: 0 2rem 1rem 0;
       }

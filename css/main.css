@@ -1,3 +1,8 @@
+/* I need to change carousel buttons color in testimonials.scss manuallly */
+/* $blue: #1b9eb1; //GPP color,  ugly
+$blue-darker: #065f6c; */
+/* $blue: #1877f2; //facebook color, middle one
+$blue-darker: #1155ad; */
 @font-face {
   font-family: "Lato-Regular";
   src: url("../fonts/Lato-Regular.ttf") format("truetype");
@@ -43,7 +48,7 @@
   color: black;
 }
 .footer__icons ion-icon:hover {
-  color: #1b9eb1;
+  color: #1873f0;
 }
 
 .testimonials__linkedin a, .nav__li__link {
@@ -55,7 +60,7 @@
 }
 
 .nav__li__link:hover {
-  color: #1b9eb1;
+  color: #1873f0;
 }
 
 .nav__burger__line::after, .nav__burger__line::before, .nav__burger__line {
@@ -99,7 +104,7 @@
   color: black;
 }
 .nav__icons ion-icon:hover {
-  color: #1b9eb1;
+  color: #1873f0;
 }
 .nav__burger {
   background: none;
@@ -311,16 +316,16 @@
   width: 12px;
 }
 .projects__container::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(27, 158, 177, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(24, 115, 240, 0.3);
   border-radius: 10px;
 }
 .projects__container::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(27, 158, 177, 0.5);
+  -webkit-box-shadow: inset 0 0 6px rgba(24, 115, 240, 0.5);
 }
 .projects__container__item {
   align-items: center;
-  border: 0.2rem solid #1b9eb1;
+  border: 0.2rem solid #1873f0;
   display: flex;
   font-style: italic;
   height: 23rem;
@@ -331,7 +336,7 @@
 }
 .projects__container__item__link-description {
   align-items: center;
-  background-color: #1b9eb1;
+  background-color: #1873f0;
   border: none;
   bottom: 0;
   color: white;
@@ -351,13 +356,13 @@
   }
 }
 .projects__container__item__link-description:hover {
-  background-color: #065f6c;
+  background-color: #1459ba;
   cursor: pointer;
   text-decoration: underline;
 }
 .projects__container__item__link-description--wide {
   align-items: center;
-  background-color: #1b9eb1;
+  background-color: #1873f0;
   border: none;
   bottom: 0;
   color: white;
@@ -377,13 +382,13 @@
   }
 }
 .projects__container__item__link-description--wide:hover {
-  background-color: #065f6c;
+  background-color: #1459ba;
   cursor: pointer;
   text-decoration: underline;
 }
 .projects__container__item__link-live {
   align-items: center;
-  background-color: #1b9eb1;
+  background-color: #1873f0;
   border: none;
   bottom: 0;
   color: white;
@@ -403,12 +408,12 @@
   }
 }
 .projects__container__item__link-live:hover {
-  background-color: #065f6c;
+  background-color: #1459ba;
   cursor: pointer;
   text-decoration: underline;
 }
 .projects__container__item__title {
-  color: #1b9eb1;
+  color: #1873f0;
   font-size: 2.5rem;
   letter-spacing: 0.2rem;
   text-align: center;
@@ -441,13 +446,17 @@
   grid-area: menu;
 }
 .projects__menu__button {
-  background-color: #1b9eb1;
+  background-color: #1873f0;
   border-radius: 10%;
   border: 2px solid white;
   color: white;
   padding: 1rem;
   margin: 0 1rem 1rem 0;
   box-shadow: 0px 4px 15px rgba(59, 161, 197, 0.7);
+}
+.projects__menu__button:hover {
+  background-color: #1459ba;
+  text-decoration: underline;
 }
 @media (min-width: 576px) {
   .projects__menu__button {
@@ -546,7 +555,7 @@
 }
 .testimonials__carousel__opinion__main {
   background-color: white;
-  border: 2px solid #1b9eb1;
+  border: 2px solid #1873f0;
   border-radius: 4%;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
   font-size: 1.9rem;
@@ -595,22 +604,22 @@
   }
 }
 .testimonials__linkedin a {
-  color: #1b9eb1;
+  color: #1873f0;
 }
 .testimonials__linkedin a:hover {
-  color: #065f6c;
+  color: #1459ba;
 }
 
 .carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231b9eb1'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231873f0'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
 }
 
 .carousel-control-next-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231b9eb1'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231873f0'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
 .carousel-indicators [data-bs-target] {
-  background-color: #1b9eb1;
+  background-color: #1873f0;
   height: 2rem;
   width: 7rem;
 }
@@ -651,13 +660,14 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+ul {
   margin: 0;
   padding: 0;
 }
 
 h2 {
-  color: #065f6c;
+  color: #1459ba;
   font-size: 3.6rem;
   letter-spacing: 0.5rem;
   margin-bottom: 2rem;
