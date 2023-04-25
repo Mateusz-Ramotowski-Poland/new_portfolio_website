@@ -1,4 +1,6 @@
-/* I need to change carousel buttons color in testimonials.scss manuallly */
+/* I need to change color manuallly inside:
+technologies.js
+carousel buttons color in testimonials.scss  */
 /* $blue: #1b9eb1; //GPP color,  ugly
 $blue-darker: #065f6c; */
 /* $blue: #1877f2; //facebook color, middle one
@@ -8,37 +10,82 @@ $blue-darker: #1155ad; */
   src: url("../fonts/Lato-Regular.ttf") format("truetype");
 }
 .about {
-  display: grid;
-  grid-template-areas: "title title title" "description photo technologies";
-  grid-template-columns: 140rem 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 10rem;
 }
-.abouth2 {
+@media (min-width: 1200px) {
+  .about {
+    display: grid;
+    gap: 0rem 3rem;
+    grid-template-areas: "title title " "description technologies ";
+    grid-template-columns: 50% 1fr;
+  }
+}
+@media (min-width: 1920px) {
+  .about {
+    grid-template-columns: 40% 1fr;
+  }
+}
+.about canvas {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .about canvas {
+    width: 72rem;
+  }
+}
+@media (min-width: 992px) {
+  .about canvas {
+    width: 85rem;
+  }
+}
+@media (min-width: 1200px) {
+  .about canvas {
+    width: 100%;
+    margin: 4rem 0 8rem 0;
+  }
+}
+@media (min-width: 1440px) {
+  .about canvas {
+    margin: -8rem 0 0 0;
+  }
+}
+@media (min-width: 1920px) {
+  .about canvas {
+    margin-top: -12rem;
+  }
+}
+.about h2 {
   grid-area: title;
 }
 .about__description {
   grid-area: description;
 }
 .about__description p {
-  line-height: 140%;
-  margin-bottom: 1rem;
-}
-.about__photo {
-  grid-area: photo;
-}
-.about__photo img {
-  border-radius: 50%;
-  height: 20rem;
-  width: 20rem;
-}
-@media (min-width: 576px) {
-  .about__photo img {
-    height: 30rem;
-    width: 30rem;
-  }
+  line-height: 135%;
+  margin-bottom: 2rem;
+  max-width: 95rem;
 }
 .about__technologies {
   grid-area: technologies;
+}
+@media (min-width: 768px) {
+  .about__technologies__canvas-container {
+    margin: 0 auto;
+    width: 72rem;
+  }
+}
+@media (min-width: 992px) {
+  .about__technologies__canvas-container {
+    width: 85rem;
+  }
+}
+@media (min-width: 1200px) {
+  .about__technologies__canvas-container {
+    display: flex;
+    height: 100%;
+  }
 }
 
 .contact {
