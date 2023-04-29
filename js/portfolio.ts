@@ -13,9 +13,12 @@ const july2022Projects = Array.from(july2022Elements).slice(1);
 const november2022Elements = document.querySelectorAll('[data-filter="XI/2022"]');
 const november2022Button = november2022Elements[0];
 const november2022Projects = Array.from(november2022Elements).slice(1);
-const allProjects = [december2021Projects, march2022Projects, april2022Projects, july2022Projects, november2022Projects];
+const april2023Elements = document.querySelectorAll('[data-filter="IV/2023"]');
+const april2023Button = april2023Elements[0];
+const april2023Projects = Array.from(april2023Elements).slice(1);
+const allProjects = [december2021Projects, march2022Projects, april2022Projects, july2022Projects, november2022Projects, april2023Projects];
 const allProjectsButton = document.querySelector('[data-filter="all"]');
-const allFilterButtons = [december2021Button, march2022Button, april2022Button, july2022Button, november2022Button];
+const allFilterButtons = [december2021Button, march2022Button, april2022Button, july2022Button, november2022Button, april2023Button];
 
 function hideElement(event) {
   event.target.classList.add("hidden");
