@@ -147,10 +147,17 @@ Rest is changed by changing 2 below variables */
 
 .header {
   align-items: center;
+  background-color: #fff;
+  border-bottom: 2px solid #1873f0;
   display: flex;
   font-size: inherit;
   min-height: 5rem;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.header.active {
+  border-bottom: none;
 }
 
 .nav {
@@ -204,6 +211,7 @@ Rest is changed by changing 2 below variables */
 }
 .nav__burger.active ~ .nav__ul {
   background: white;
+  border-bottom: 2px solid #1873f0;
   display: block;
   position: absolute;
   text-align: center;

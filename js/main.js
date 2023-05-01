@@ -1,8 +1,14 @@
 const burger = document.querySelector(".nav__burger");
-burger.addEventListener("click", () => burger.classList.toggle("active"));
+const header = document.querySelector(".header");
+burger.addEventListener("click", () => {
+  burger.classList.toggle("active");
+  header.classList.toggle("active");
+});
+
 window.addEventListener("resize", () => {
   if (window.innerWidth > 991) {
     burger.classList.remove("active");
+    header.classList.remove("active");
   }
 });
 

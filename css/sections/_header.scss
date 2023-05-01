@@ -3,6 +3,8 @@
 @use "../extends";
 @use "../mixins" as mi;
 
+$header-bottom-border: 2px solid co.$blue;
+
 %link-header {
   @extend %link;
   &:hover {
@@ -26,10 +28,18 @@
 
 .header {
   align-items: center;
+  background-color: #fff;
+  border-bottom: $header-bottom-border;
   display: flex;
   font-size: inherit;
   min-height: 5rem;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  &.active {
+    border-bottom: none;
+  }
 }
 
 .nav {
@@ -71,6 +81,7 @@
 
     &.active ~ .nav__ul {
       background: white;
+      border-bottom: $header-bottom-border;
       display: block;
       position: absolute;
       text-align: center;
