@@ -1,10 +1,7 @@
-/* I need to change color manuallly inside:
-technologies.js
-carousel buttons color in testimonials.scss  */
+/* I need to change the colour manually only inside: 
+- technologies.js 
+- carousel buttons colour in testimonials.scss 
+Rest is changed by changing 2 below variables */
 
-/* $blue: #1b9eb1; //GPP color,  ugly
-$blue-darker: #065f6c; */
-/* $blue: #1877f2; //facebook color, middle one
-$blue-darker: #1155ad; */
-$blue: #1873f0; //twitter color, best one
+$blue: #1873f0; //twitter color
 $blue-darker: #1459ba;
