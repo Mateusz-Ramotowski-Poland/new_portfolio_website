@@ -392,29 +392,24 @@ Rest is changed by changing 2 below variables */
   .projects {
     display: grid;
     grid-template-areas: "title title" "description menu" "projects projects";
-    grid-template-columns: 50rem 1fr;
-  }
-}
-@media (min-width: 1200px) {
-  .projects {
-    grid-template-columns: 60rem 1fr;
+    grid-template-columns: 30rem 1fr;
   }
 }
 @media (min-width: 1440px) {
   .projects {
-    grid-template-columns: 90rem 1fr;
+    grid-template-columns: 35rem 1fr;
   }
 }
 @media (min-width: 1920px) {
   .projects {
-    grid-template-columns: 95rem 1fr;
+    grid-template-columns: 55rem 1fr;
   }
 }
 .projects__container {
   display: flex;
   gap: 3rem;
   grid-area: projects;
-  margin: 1rem 0 13rem 0;
+  margin: 4rem 0 13rem 0;
   overflow-x: auto;
   padding-bottom: 2rem;
 }
@@ -575,14 +570,10 @@ Rest is changed by changing 2 below variables */
 .projects__menu__button:hover {
   background-color: #1459ba;
   text-decoration: underline;
-}
-@media (min-width: 576px) {
-  .projects__menu__button {
-    margin: 0 2rem 1rem 0;
-  }
-}
-.projects__menu__button:hover {
   cursor: pointer;
+}
+.projects__menu__time-filtration {
+  margin-bottom: 2.5rem;
 }
 .projects__title {
   grid-area: title;

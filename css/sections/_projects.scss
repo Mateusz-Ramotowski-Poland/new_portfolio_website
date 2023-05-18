@@ -38,23 +38,20 @@ $item-width-small: 20rem;
       "title title"
       "description menu"
       "projects projects";
-    grid-template-columns: 50rem 1fr;
-  }
-  @include bp.xlg {
-    grid-template-columns: 60rem 1fr;
+    grid-template-columns: 30rem 1fr;
   }
   @include bp.xxlg {
-    grid-template-columns: 90rem 1fr;
+    grid-template-columns: 35rem 1fr;
   }
   @include bp.xxxlg {
-    grid-template-columns: 95rem 1fr;
+    grid-template-columns: 55rem 1fr;
   }
 
   &__container {
     display: flex;
     gap: 3rem;
     grid-area: projects;
-    margin: 1rem 0 va.$section-margin-bottom 0;
+    margin: 4rem 0 va.$section-margin-bottom 0;
     overflow-x: auto;
     padding-bottom: 2rem;
     @include bp.md {
@@ -148,14 +145,12 @@ $item-width-small: 20rem;
       &:hover {
         background-color: co.$blue-darker;
         text-decoration: underline;
-      }
-      @include bp.sm {
-        margin: 0 2rem 1rem 0;
-      }
-
-      &:hover {
         cursor: pointer;
       }
+    }
+
+    &__time-filtration {
+      margin-bottom: 2.5rem;
     }
   }
 

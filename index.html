@@ -152,19 +152,22 @@
           better and better websites.
         </p>
         <menu class="projects__menu">
-          <button class="projects__menu__button chosen-filter" data-time-filter="all">Projects since XII 2021</button>
-          <button class="projects__menu__button" data-time-filter="IV/2023">IV-VIII 2023</button>
-          <button class="projects__menu__button" data-time-filter="XI/2022">XI 2022</button>
-          <button class="projects__menu__button" data-time-filter="VII/2022">VII-X 2022</button>
-          <button class="projects__menu__button" data-time-filter="IV/2022">IV-VI 2022</button>
-          <button class="projects__menu__button" data-time-filter="III/2022">III-IV 2022</button>
-          <button class="projects__menu__button" data-time-filter="XII/2021">XII 2021</button>
-
-          <button class="projects__menu__button chosen-filter" data-technology-filter="all technologies">All technologies</button>
-          <button class="projects__menu__button" data-technology-filter="only html,css">Only HTML, CSS</button>
-          <button class="projects__menu__button" data-technology-filter="only html,css,js">Only HTML, CSS, JS</button>
-          <button class="projects__menu__button" data-technology-filter="only html,sass,ts">Only HTML, Sass, TS</button>
-          <button class="projects__menu__button" data-technology-filter="react,ts">React, TS</button>
+          <div class="projects__menu__time-filtration">
+            <button class="projects__menu__button chosen-filter" data-time-filter="all">Projects since XII 2021</button>
+            <button class="projects__menu__button" data-time-filter="IV/2023">IV-VIII 2023</button>
+            <button class="projects__menu__button" data-time-filter="XI/2022">XI 2022</button>
+            <button class="projects__menu__button" data-time-filter="VII/2022">VII-X 2022</button>
+            <button class="projects__menu__button" data-time-filter="IV/2022">IV-VI 2022</button>
+            <button class="projects__menu__button" data-time-filter="III/2022">III-IV 2022</button>
+            <button class="projects__menu__button" data-time-filter="XII/2021">XII 2021</button>
+          </div>
+          <div class="projects__menu__technology-filtration">
+            <button class="projects__menu__button chosen-filter" data-technology-filter="all technologies">All technologies</button>
+            <button class="projects__menu__button" data-technology-filter="react,ts">React, TS</button>
+            <button class="projects__menu__button" data-technology-filter="only html,sass,ts">Only HTML, Sass, TS</button>
+            <button class="projects__menu__button" data-technology-filter="only html,css,js">Only HTML, CSS, JS</button>
+            <button class="projects__menu__button" data-technology-filter="only html,css">Only HTML, CSS</button>
+          </div>
         </menu>
         <div class="projects__container">
           <div class="projects__container__item" data-time-filter="IV/2023" data-technology-filter="only html,sass,ts">
