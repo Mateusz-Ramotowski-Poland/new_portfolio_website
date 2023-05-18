@@ -52,7 +52,11 @@ $header-bottom-border: 2px solid co.$blue;
   }
 
   &__icons {
-    @include mi.icons;
+    @include mi.icons($anchorHeight: 2rem);
+
+    @include bp.sm {
+      @include mi.icons($anchorHeight: 2.5rem);
+    }
   }
 
   &__burger {

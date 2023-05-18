@@ -16,6 +16,6 @@
   }
 
   &__icons {
-    @include mi.icons($width: 3.7rem);
+    @include mi.icons($anchorHeight: 2rem, $width: 3.7rem);
   }
 }

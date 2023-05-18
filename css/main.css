@@ -9,7 +9,7 @@ Rest is changed by changing 2 below variables */
 .about {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10rem;
+  margin-bottom: 13rem;
 }
 @media (min-width: 1200px) {
   .about {
@@ -87,7 +87,7 @@ Rest is changed by changing 2 below variables */
 }
 
 .contact {
-  margin-bottom: 10rem;
+  margin-bottom: 13rem;
 }
 
 .footer {
@@ -117,7 +117,7 @@ Rest is changed by changing 2 below variables */
   }
 }
 .footer__icons a {
-  height: inherit;
+  height: 2rem;
 }
 .footer__icons ion-icon {
   color: black;
@@ -180,13 +180,39 @@ Rest is changed by changing 2 below variables */
   }
 }
 .nav__icons a {
-  height: inherit;
+  height: 2rem;
 }
 .nav__icons ion-icon {
   color: black;
 }
 .nav__icons ion-icon:hover {
   color: #1873f0;
+}
+@media (min-width: 576px) {
+  .nav__icons {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 4.5rem;
+  }
+}
+@media (min-width: 576px) and (min-width: 576px) {
+  .nav__icons {
+    width: 5.5rem;
+  }
+}
+@media (min-width: 576px) {
+  .nav__icons a {
+    height: 2.5rem;
+  }
+}
+@media (min-width: 576px) {
+  .nav__icons ion-icon {
+    color: black;
+  }
+  .nav__icons ion-icon:hover {
+    color: #1873f0;
+  }
 }
 .nav__burger {
   background: none;
@@ -250,7 +276,7 @@ Rest is changed by changing 2 below variables */
   background-size: cover;
   background-position: 83.5% 0%;
   height: 90rem;
-  margin-bottom: 10rem;
+  margin-bottom: 13rem;
   position: relative;
 }
 @media (min-width: 576px) {
@@ -355,6 +381,10 @@ Rest is changed by changing 2 below variables */
   color: white;
 }
 
+.typed-cursor {
+  color: white;
+}
+
 .projects {
   display: block;
 }
@@ -384,7 +414,7 @@ Rest is changed by changing 2 below variables */
   display: flex;
   gap: 3rem;
   grid-area: projects;
-  margin: 1rem 0 10rem 0;
+  margin: 1rem 0 13rem 0;
   overflow-x: auto;
   padding-bottom: 2rem;
 }
@@ -573,7 +603,7 @@ Rest is changed by changing 2 below variables */
 }
 
 .testimonials {
-  margin-bottom: 10rem;
+  margin-bottom: 13rem;
 }
 .testimonials__carousel {
   position: relative;
