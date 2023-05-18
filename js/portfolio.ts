@@ -1,23 +1,23 @@
-const december2021Elements = document.querySelectorAll<HTMLElement>('[data-filter="XII/2021"]');
+const december2021Elements = document.querySelectorAll<HTMLElement>('[data-time-filter="XII/2021"]');
 const december2021Button = december2021Elements[0];
 const december2021Projects = Array.from(december2021Elements).slice(1);
-const march2022Elements = document.querySelectorAll<HTMLElement>('[data-filter="III/2022"]');
+const march2022Elements = document.querySelectorAll<HTMLElement>('[data-time-filter="III/2022"]');
 const march2022Button = march2022Elements[0];
 const march2022Projects = Array.from(march2022Elements).slice(1);
-const april2022Elements = document.querySelectorAll<HTMLElement>('[data-filter="IV/2022"]');
+const april2022Elements = document.querySelectorAll<HTMLElement>('[data-time-filter="IV/2022"]');
 const april2022Button = april2022Elements[0];
 const april2022Projects = Array.from(april2022Elements).slice(1);
-const july2022Elements = document.querySelectorAll<HTMLElement>('[data-filter="VII/2022"]');
+const july2022Elements = document.querySelectorAll<HTMLElement>('[data-time-filter="VII/2022"]');
 const july2022Button = july2022Elements[0];
 const july2022Projects = Array.from(july2022Elements).slice(1);
-const november2022Elements = document.querySelectorAll<HTMLElement>('[data-filter="XI/2022"]');
+const november2022Elements = document.querySelectorAll<HTMLElement>('[data-time-filter="XI/2022"]');
 const november2022Button = november2022Elements[0];
 const november2022Projects = Array.from(november2022Elements).slice(1);
-const april2023Elements = document.querySelectorAll<HTMLElement>('[data-filter="IV/2023"]');
+const april2023Elements = document.querySelectorAll<HTMLElement>('[data-time-filter="IV/2023"]');
 const april2023Button = april2023Elements[0];
 const april2023Projects = Array.from(april2023Elements).slice(1);
 const allProjects = [december2021Projects, march2022Projects, april2022Projects, july2022Projects, november2022Projects, april2023Projects];
-const allProjectsButton = document.querySelector('[data-filter="all"]');
+const allProjectsButton = document.querySelector('[data-time-filter="all"]');
 const allFilterButtons = [december2021Button, march2022Button, april2022Button, july2022Button, november2022Button, april2023Button];
 
 function hideElement(event) {

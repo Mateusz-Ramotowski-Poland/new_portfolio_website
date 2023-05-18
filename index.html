@@ -152,16 +152,22 @@
           better and better websites.
         </p>
         <menu class="projects__menu">
-          <button class="projects__menu__button chosen-filter" data-filter="all">All</button>
-          <button class="projects__menu__button" data-filter="IV/2023">IV-VIII 2023</button>
-          <button class="projects__menu__button" data-filter="XI/2022">XI 2022</button>
-          <button class="projects__menu__button" data-filter="VII/2022">VII-X 2022</button>
-          <button class="projects__menu__button" data-filter="IV/2022">IV-VI 2022</button>
-          <button class="projects__menu__button" data-filter="III/2022">III-IV 2022</button>
-          <button class="projects__menu__button" data-filter="XII/2021">XII 2021</button>
+          <button class="projects__menu__button chosen-filter" data-time-filter="all">Projects since XII 2021</button>
+          <button class="projects__menu__button" data-time-filter="IV/2023">IV-VIII 2023</button>
+          <button class="projects__menu__button" data-time-filter="XI/2022">XI 2022</button>
+          <button class="projects__menu__button" data-time-filter="VII/2022">VII-X 2022</button>
+          <button class="projects__menu__button" data-time-filter="IV/2022">IV-VI 2022</button>
+          <button class="projects__menu__button" data-time-filter="III/2022">III-IV 2022</button>
+          <button class="projects__menu__button" data-time-filter="XII/2021">XII 2021</button>
+
+          <button class="projects__menu__button chosen-filter" data-technology-filter="all technologies">All technologies</button>
+          <button class="projects__menu__button" data-technology-filter="only html,css">Only HTML, CSS</button>
+          <button class="projects__menu__button" data-technology-filter="only html,css,js">Only HTML, CSS, JS</button>
+          <button class="projects__menu__button" data-technology-filter="only html,sass,ts">Only HTML, Sass, TS</button>
+          <button class="projects__menu__button" data-technology-filter="react,ts">React, TS</button>
         </menu>
         <div class="projects__container">
-          <div class="projects__container__item" data-filter="IV/2023">
+          <div class="projects__container__item" data-time-filter="IV/2023" data-technology-filter="only html,sass,ts">
             <h3 class="projects__container__item__title">This Portfolio Webpage</h3>
             <a
               class="projects__container__item__link-description--wide"
@@ -170,7 +176,7 @@
               >Description</a
             >
           </div>
-          <div class="projects__container__item" data-filter="XI/2022">
+          <div class="projects__container__item" data-time-filter="XI/2022" data-technology-filter="only html,css,js">
             <h3 class="projects__container__item__title">Old Portfolio Webpage</h3>
             <a class="projects__container__item__link-live" target="_blank" href="https://mateusz-ramotowski-poland.github.io/old-portfolio-webpage/"
               >Live demo</a
@@ -182,7 +188,7 @@
               >Description</a
             >
           </div>
-          <div class="projects__container__item" data-filter="VII/2022">
+          <div class="projects__container__item" data-time-filter="VII/2022" data-technology-filter="react,ts">
             <h3 class="projects__container__item__title">Plant App</h3>
             <a
               class="projects__container__item__link-description--wide"
@@ -191,13 +197,13 @@
               >Description</a
             >
           </div>
-          <div class="projects__container__item" data-filter="VII/2022">
+          <div class="projects__container__item" data-time-filter="VII/2022" data-technology-filter="only html,sass,ts">
             <h3 class="projects__container__item__title">Complex To Do List</h3>
             <a class="projects__container__item__link-description--wide" target="_blank" href="https://github.com/Mateusz-Ramotowski-Poland/ToDoList"
               >Description</a
             >
           </div>
-          <div class="projects__container__item" data-filter="IV/2022">
+          <div class="projects__container__item" data-time-filter="IV/2022" data-technology-filter="only html,css,js">
             <h3 class="projects__container__item__title">Latest Spaceflights Articles</h3>
             <a
               class="projects__container__item__link-live"
@@ -212,7 +218,7 @@
               >Description</a
             >
           </div>
-          <div class="projects__container__item" data-filter="IV/2022">
+          <div class="projects__container__item" data-time-filter="IV/2022" data-technology-filter="only html,css,js">
             <h3 class="projects__container__item__title">Daily Organizer</h3>
             <a class="projects__container__item__link-live" href="https://mateusz-ramotowski-poland.github.io/Daily-week-organizer/" target="_blank"
               >Live demo</a
@@ -224,7 +230,7 @@
               >Description</a
             >
           </div>
-          <div class="projects__container__item" data-filter="III/2022">
+          <div class="projects__container__item" data-time-filter="III/2022" data-technology-filter="only html,css,js">
             <h3 class="projects__container__item__title">Tic Tac Toe Game</h3>
             <a
               class="projects__container__item__link-live"
@@ -239,7 +245,7 @@
               >Description</a
             >
           </div>
-          <div class="projects__container__item" data-filter="III/2022">
+          <div class="projects__container__item" data-time-filter="III/2022" data-technology-filter="only html,css,js">
             <h3 class="projects__container__item__title">Hangman Game</h3>
             <a
               class="projects__container__item__link-live"
@@ -254,7 +260,7 @@
               >Description</a
             >
           </div>
-          <div class="projects__container__item" data-filter="XII/2021">
+          <div class="projects__container__item" data-time-filter="XII/2021" data-technology-filter="only html,css">
             <h3 class="projects__container__item__title">Clone - Art Eco</h3>
             <a
               class="projects__container__item__link-live"
@@ -269,7 +275,7 @@
               >Description</a
             >
           </div>
-          <div class="projects__container__item" data-filter="XII/2021">
+          <div class="projects__container__item" data-time-filter="XII/2021" data-technology-filter="only html,css">
             <h3 class="projects__container__item__title">Clone - Stylowe Ogrody</h3>
             <a
               class="projects__container__item__link-live"
@@ -284,7 +290,7 @@
               >Description</a
             >
           </div>
-          <div class="projects__container__item" data-filter="XII/2021">
+          <div class="projects__container__item" data-time-filter="XII/2021" data-technology-filter="only html,css">
             <h3 class="projects__container__item__title">Clone - WBST2</h3>
             <a class="projects__container__item__link-live" href="https://mateusz-ramotowski-poland.github.io/Web-Page-Clone2-WBST2/" target="_blank"
               >Live demo</a
@@ -296,7 +302,7 @@
               >Description</a
             >
           </div>
-          <div class="projects__container__item" data-filter="XII/2021">
+          <div class="projects__container__item" data-time-filter="XII/2021" data-technology-filter="only html,css">
             <h3 class="projects__container__item__title">Clone - WBST1</h3>
             <a class="projects__container__item__link-live" href="https://mateusz-ramotowski-poland.github.io/Web-Page-Clone1-WBST1/" target="_blank"
               >Live demo</a
