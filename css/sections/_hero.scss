@@ -68,6 +68,7 @@
     }
 
     & p {
+      color: white;
       font-size: 2.5rem;
       letter-spacing: 0.2rem;
       @include bp.lg {
@@ -76,6 +77,10 @@
       @include bp.xxlg {
         font-size: 4.2rem;
       }
+    }
+
+    &__typed {
+      color: white;
     }
   }
 }

@@ -128,7 +128,7 @@ Rest is changed by changing 2 below variables */
 
 .testimonials__linkedin a, .nav__li__link {
   text-decoration: none;
-  color: black;
+  color: #495057;
 }
 .testimonials__linkedin a:hover, .nav__li__link:hover {
   cursor: pointer;
@@ -337,6 +337,7 @@ Rest is changed by changing 2 below variables */
   }
 }
 .hero__container p {
+  color: white;
   font-size: 2.5rem;
   letter-spacing: 0.2rem;
 }
@@ -349,6 +350,9 @@ Rest is changed by changing 2 below variables */
   .hero__container p {
     font-size: 4.2rem;
   }
+}
+.hero__container__typed {
+  color: white;
 }
 
 .projects {
@@ -710,6 +714,7 @@ Rest is changed by changing 2 below variables */
 
 * {
   box-sizing: border-box;
+  color: #495057;
   font-family: "Lato-Regular", sans-serif;
   font-size: inherit;
   padding: 0;
