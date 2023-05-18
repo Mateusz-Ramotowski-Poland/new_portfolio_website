@@ -588,6 +588,11 @@ Rest is changed by changing 2 below variables */
   grid-area: title;
 }
 
+.chosen-filter {
+  background-color: #1459ba;
+  text-decoration: underline;
+}
+
 .carousel-control-next-icon, .carousel-control-prev-icon {
   height: 5rem;
   width: 5rem;

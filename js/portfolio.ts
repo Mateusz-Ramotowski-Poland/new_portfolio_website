@@ -1,19 +1,19 @@
-const december2021Elements = document.querySelectorAll('[data-filter="XII/2021"]');
+const december2021Elements = document.querySelectorAll<HTMLElement>('[data-filter="XII/2021"]');
 const december2021Button = december2021Elements[0];
 const december2021Projects = Array.from(december2021Elements).slice(1);
-const march2022Elements = document.querySelectorAll('[data-filter="III/2022"]');
+const march2022Elements = document.querySelectorAll<HTMLElement>('[data-filter="III/2022"]');
 const march2022Button = march2022Elements[0];
 const march2022Projects = Array.from(march2022Elements).slice(1);
-const april2022Elements = document.querySelectorAll('[data-filter="IV/2022"]');
+const april2022Elements = document.querySelectorAll<HTMLElement>('[data-filter="IV/2022"]');
 const april2022Button = april2022Elements[0];
 const april2022Projects = Array.from(april2022Elements).slice(1);
-const july2022Elements = document.querySelectorAll('[data-filter="VII/2022"]');
+const july2022Elements = document.querySelectorAll<HTMLElement>('[data-filter="VII/2022"]');
 const july2022Button = july2022Elements[0];
 const july2022Projects = Array.from(july2022Elements).slice(1);
-const november2022Elements = document.querySelectorAll('[data-filter="XI/2022"]');
+const november2022Elements = document.querySelectorAll<HTMLElement>('[data-filter="XI/2022"]');
 const november2022Button = november2022Elements[0];
 const november2022Projects = Array.from(november2022Elements).slice(1);
-const april2023Elements = document.querySelectorAll('[data-filter="IV/2023"]');
+const april2023Elements = document.querySelectorAll<HTMLElement>('[data-filter="IV/2023"]');
 const april2023Button = april2023Elements[0];
 const april2023Projects = Array.from(april2023Elements).slice(1);
 const allProjects = [december2021Projects, march2022Projects, april2022Projects, july2022Projects, november2022Projects, april2023Projects];
@@ -34,6 +34,11 @@ function showAllProjects() {
       }, 20);
     }
   }
+
+  allProjectsButton.classList.add("chosen-filter");
+  for (const btn of allFilterButtons) {
+    btn.classList.remove("chosen-filter");
+  }
 }
 
 function showSelectedProjectsHideOthers(event) {
@@ -42,6 +47,10 @@ function showSelectedProjectsHideOthers(event) {
   for (let i = 0; i < allFilterButtons.length; i++) {
     if (clickedButton === allFilterButtons[i]) {
       buttonIndex = i;
+      allFilterButtons[i].classList.add("chosen-filter");
+      allProjectsButton.classList.remove("chosen-filter");
+    } else {
+      allFilterButtons[i].classList.remove("chosen-filter");
     }
   }
   for (let i = 0; i < allProjects.length; i++) {

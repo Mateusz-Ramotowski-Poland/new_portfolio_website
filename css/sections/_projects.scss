@@ -163,3 +163,8 @@ $item-width-small: 20rem;
     grid-area: title;
   }
 }
+
+.chosen-filter {
+  background-color: co.$blue-darker;
+  text-decoration: underline;
+}
