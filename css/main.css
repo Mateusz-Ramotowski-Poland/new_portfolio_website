@@ -577,7 +577,7 @@ Rest is changed by changing 2 below variables */
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 66rem;
+  height: 62rem;
   justify-content: end;
   margin: 0 0 10rem;
   padding: 0;
@@ -600,12 +600,11 @@ Rest is changed by changing 2 below variables */
 }
 @media (min-width: 1200px) {
   .testimonials__carousel__opinion {
-    height: 64rem;
+    height: 68rem;
   }
 }
 @media (min-width: 1440px) {
   .testimonials__carousel__opinion {
-    height: 60rem;
     padding: 0 2rem;
   }
 }
@@ -644,6 +643,7 @@ Rest is changed by changing 2 below variables */
   font-size: 1.9rem;
   line-height: 130%;
   margin-bottom: 1rem;
+  max-width: 95rem;
   padding: 0.5rem;
 }
 @media (min-width: 576px) {
