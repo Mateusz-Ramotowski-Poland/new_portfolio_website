@@ -17,63 +17,123 @@ const april2023Elements = document.querySelectorAll<HTMLElement>('[data-time-fil
 const april2023Button = april2023Elements[0];
 const april2023Projects = Array.from(april2023Elements).slice(1);
 const allProjects = [december2021Projects, march2022Projects, april2022Projects, july2022Projects, november2022Projects, april2023Projects];
-const allProjectsButton = document.querySelector('[data-time-filter="all"]');
-const allFilterButtons = [december2021Button, march2022Button, april2022Button, july2022Button, november2022Button, april2023Button];
+const allTimeProjectsButton = document.querySelector('[data-time-filter="all time"]');
+const allTimeFilterButtons = [
+  december2021Button,
+  march2022Button,
+  april2022Button,
+  july2022Button,
+  november2022Button,
+  april2023Button,
+  allTimeProjectsButton,
+];
+const htmlCssButton = document.querySelector<HTMLElement>('[data-technology-filter="only html,css"]');
+const htmlCssJsButton = document.querySelector<HTMLElement>('[data-technology-filter="only html,css,js"]');
+const htmlSassTsButton = document.querySelector<HTMLElement>('[data-technology-filter="only html,sass,ts"]');
+const reactTsButton = document.querySelector<HTMLElement>('[data-technology-filter="react,ts"]');
+const allTechnologiesProjectsButton = document.querySelector('[data-technology-filter="all technologies"]');
+const allTechnologyFilterButtons = [htmlCssButton, htmlCssJsButton, htmlSassTsButton, reactTsButton, allTechnologiesProjectsButton];
+let timeFilterSpecified = "all time";
+let technologyFilterSpecified = "all technologies";
 
 function hideElement(event) {
   event.target.classList.add("hidden");
   event.target.removeEventListener("transitionend", hideElement);
 }
 
-function showAllProjects() {
-  for (const arr of allProjects) {
-    for (const project of arr) {
-      project.classList.remove("hidden");
-      setTimeout(function () {
-        project.classList.remove("my-visually-hidden");
-      }, 20);
-    }
-  }
-
-  allProjectsButton.classList.add("chosen-filter");
-  for (const btn of allFilterButtons) {
-    btn.classList.remove("chosen-filter");
+function hideProject(project: HTMLElement) {
+  if (!project.classList.contains("hidden")) {
+    project.classList.add("my-visually-hidden");
+    project.addEventListener("transitionend", hideElement);
   }
 }
 
-function showSelectedProjectsHideOthers(event) {
-  const clickedButton = event.target;
-  let buttonIndex;
-  for (let i = 0; i < allFilterButtons.length; i++) {
-    if (clickedButton === allFilterButtons[i]) {
-      buttonIndex = i;
-      allFilterButtons[i].classList.add("chosen-filter");
-      allProjectsButton.classList.remove("chosen-filter");
-    } else {
-      allFilterButtons[i].classList.remove("chosen-filter");
+function showProject(project: HTMLElement) {
+  project.classList.remove("hidden");
+  setTimeout(function () {
+    project.classList.remove("my-visually-hidden");
+  }, 20);
+}
+
+function showAllProjects() {
+  for (const arr of allProjects) {
+    for (const project of arr) {
+      showProject(project);
     }
   }
-  for (let i = 0; i < allProjects.length; i++) {
-    if (buttonIndex === i) {
-      for (const project of allProjects[i]) {
-        project.classList.remove("hidden");
-        setTimeout(function () {
-          project.classList.remove("my-visually-hidden");
-        }, 20);
-      }
+}
+
+function highlightChosenFilter(filterCategory: Element[], clickedButton: HTMLButtonElement) {
+  for (const timeBtn of filterCategory) {
+    if (timeBtn !== clickedButton) {
+      timeBtn.classList.remove("chosen-filter");
     } else {
-      for (const project of allProjects[i]) {
-        if (!project.classList.contains("hidden")) {
-          project.classList.add("my-visually-hidden");
-          project.addEventListener("transitionend", hideElement);
+      timeBtn.classList.add("chosen-filter");
+    }
+  }
+}
+
+function showFilteredProjects(event: Event) {
+  const clickedButton = event.target as HTMLButtonElement;
+
+  if (clickedButton.dataset.technologyFilter) {
+    technologyFilterSpecified = clickedButton.dataset.technologyFilter;
+    highlightChosenFilter(allTechnologyFilterButtons, clickedButton);
+  }
+
+  if (clickedButton.dataset.timeFilter) {
+    timeFilterSpecified = clickedButton.dataset.timeFilter;
+    highlightChosenFilter(allTimeFilterButtons, clickedButton);
+  }
+
+  if (timeFilterSpecified === "all time" && technologyFilterSpecified === "all technologies") {
+    showAllProjects();
+  }
+
+  if (timeFilterSpecified === "all time" && technologyFilterSpecified !== "all technologies") {
+    for (const projectsArr of allProjects) {
+      for (const project of projectsArr) {
+        if (technologyFilterSpecified === project.dataset.technologyFilter) {
+          showProject(project);
+        } else {
+          hideProject(project);
+        }
+      }
+    }
+  }
+
+  if (timeFilterSpecified !== "all time" && technologyFilterSpecified === "all technologies") {
+    for (const projectsArr of allProjects) {
+      for (const project of projectsArr) {
+        if (timeFilterSpecified === project.dataset.timeFilter) {
+          showProject(project);
+        } else {
+          hideProject(project);
+        }
+      }
+    }
+  }
+
+  if (timeFilterSpecified !== "all time" && technologyFilterSpecified !== "all technologies") {
+    for (const projectsArr of allProjects) {
+      for (const project of projectsArr) {
+        if (timeFilterSpecified === project.dataset.timeFilter) {
+          if (technologyFilterSpecified === project.dataset.technologyFilter) {
+            showProject(project);
+          } else {
+            hideProject(project);
+          }
+        } else {
+          hideProject(project);
         }
       }
     }
   }
 }
 
-allProjectsButton.addEventListener("click", showAllProjects);
-
-for (const btn of allFilterButtons) {
-  btn.addEventListener("click", showSelectedProjectsHideOthers);
+for (const btn of allTechnologyFilterButtons) {
+  btn.addEventListener("click", showFilteredProjects);
+}
+for (const btn of allTimeFilterButtons) {
+  btn.addEventListener("click", showFilteredProjects);
 }
