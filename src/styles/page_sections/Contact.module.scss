@@ -1,5 +1,11 @@
+@use "../breakpoints" as bp;
 @use "../variables" as va;
 
 .contact {
   margin-bottom: va.$section-bottom-margin;
+}
+
+.container {
+  max-width: va.$max-text-width;
+  margin: va.$sectionIntroduction-rest-gap auto 0 auto;
 }

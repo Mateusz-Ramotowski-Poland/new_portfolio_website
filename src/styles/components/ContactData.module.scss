@@ -1,0 +1,33 @@
+@use "../breakpoints" as bp;
+@use "../colors" as co;
+@use "../variables" as va;
+
+.contact_data {
+  column-gap: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  word-break: break-all;
+
+  @include bp.lg {
+    column-gap: 0;
+    display: grid;
+    grid-template-columns: 45.5rem 1fr;
+  }
+}
+
+.data_element {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  & p {
+    font-weight: 600;
+  }
+}
+
+.icon {
+  flex-shrink: 0;
+  font-size: 4.5rem;
+  color: co.$primary;
+}
