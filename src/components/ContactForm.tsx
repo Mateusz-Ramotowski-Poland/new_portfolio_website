@@ -4,6 +4,7 @@ import spinner from "../images/spinner200px.gif";
 //import { api } from "../shared/api";
 import { IonIcon } from "@ionic/react";
 import { alertCircleOutline, checkmarkCircleOutline, closeCircleOutline } from "../../node_modules/ionicons/icons";
+import { api } from "../shared";
 
 interface File {
   size: number;
@@ -34,7 +35,7 @@ export const ContactForm = () => {
     setFilesSize(filesSize / 1000000);
   };
 
-  /*   const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
     if (filesSize > 24 || isSendindForm) {
@@ -60,7 +61,7 @@ export const ContactForm = () => {
         setDeliveryStatus(nieDostarczono);
       })
       .finally(() => setIsSendindForm(false));
-  }; */
+  };
 
   const deliveryStatusIcon =
     deliveryStatus === nieDostarczono ? (
@@ -70,7 +71,7 @@ export const ContactForm = () => {
     );
 
   return (
-    <form className={styles.form} /* onSubmit={handleSubmit} */ onClick={handleClick}>
+    <form className={styles.form} onSubmit={handleSubmit} onClick={handleClick}>
       <div className={styles.element}>
         <label htmlFor="imie"> </label>
         <input className={styles.input} id="imie" minLength={3} name="imie" placeholder="* Name" required></input>
