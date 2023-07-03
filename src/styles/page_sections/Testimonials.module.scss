@@ -1,0 +1,12 @@
+@use "../breakpoints" as bp;
+@use "../variables" as va;
+@use "../mixins" as mi;
+
+.introduction {
+  @include mi.section-introduction-paragraph;
+}
+
+.testimonials {
+  margin-bottom: va.$section-bottom-margin;
+  position: relative;
+}

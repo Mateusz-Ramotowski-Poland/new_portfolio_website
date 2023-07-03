@@ -1,0 +1,22 @@
+@use "../colors" as co;
+
+$font-size: 3rem;
+
+.icon {
+  color: black;
+  font-size: $font-size;
+  &:hover {
+    color: co.$primary;
+  }
+}
+
+.icons {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: ($font-size * 2 + 0.7rem);
+
+  & a {
+    height: $font-size;
+  }
+}

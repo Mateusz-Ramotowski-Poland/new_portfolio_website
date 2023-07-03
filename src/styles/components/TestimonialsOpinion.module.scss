@@ -1,0 +1,67 @@
+@use "../breakpoints" as bp;
+@use "../colors" as co;
+@use "../variables" as va;
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 67rem;
+  justify-content: end;
+  margin: 0 0 4rem;
+  @include bp.sm {
+    height: 69rem;
+  }
+  @include bp.md {
+    height: 60rem;
+  }
+  @include bp.lg {
+    height: 57rem;
+  }
+}
+
+.img {
+  border-radius: 50%;
+  height: 20rem;
+  margin-bottom: 1.5rem;
+  width: 20rem;
+  @include bp.sm {
+    height: 30rem;
+    width: 30rem;
+  }
+}
+
+.job {
+  font-size: 1.45rem;
+  font-weight: 400;
+  text-align: center;
+
+  @include bp.sm {
+    font-size: va.$font-size-sm-normal-text;
+  }
+}
+
+.opinion {
+  border: 2px solid co.$primary;
+  border-radius: 4%;
+  font-size: 2rem;
+  line-height: 130%;
+  margin-bottom: 1rem;
+  max-width: va.$max-text-width;
+  padding: 0.5rem;
+
+  @include bp.sm {
+    font-size: va.$font-size-sm-normal-text;
+    padding: 1.5rem;
+  }
+}
+
+.person {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+
+  @include bp.sm {
+    font-size: va.$font-size-sm-normal-text;
+  }
+}

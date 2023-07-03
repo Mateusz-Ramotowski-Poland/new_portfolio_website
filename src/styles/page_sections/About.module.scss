@@ -1,0 +1,99 @@
+@use "..//breakpoints" as bp;
+@use "../colors" as co;
+@use "../variables" as va;
+
+$vertical-gap: 2rem;
+
+.about {
+  margin-bottom: va.$section-bottom-margin;
+}
+
+.icon {
+  flex-shrink: 0;
+  font-size: 4.5rem;
+  color: co.$primary;
+  margin-right: $vertical-gap;
+
+  @include bp.sm {
+    font-size: 5rem;
+  }
+
+  @include bp.lg {
+    font-size: 6rem;
+  }
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+
+  @include bp.sm {
+    flex-direction: column;
+  }
+
+  @include bp.lg {
+    gap: 1rem;
+  }
+}
+
+.img {
+  padding-left: $vertical-gap;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.img_small_screen {
+  display: block;
+  width: 80%;
+  margin: -3rem auto 3rem auto;
+
+  @include bp.sm {
+    width: 40%;
+  }
+
+  @include bp.lg {
+    display: none;
+  }
+}
+
+.img_container {
+  display: none;
+
+  @include bp.lg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10rem;
+  }
+}
+
+.description {
+  max-width: va.$max-text-width;
+  margin: (va.$sectionIntroduction-rest-gap - 0.5rem) auto 0 auto;
+
+  @include bp.lg {
+    display: grid;
+    grid-template-columns: 60rem 1fr;
+  }
+
+  & p {
+    line-height: 150%;
+  }
+}
+
+.subsection {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+
+  @include bp.sm {
+    flex-direction: row;
+  }
+
+  &_title {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}

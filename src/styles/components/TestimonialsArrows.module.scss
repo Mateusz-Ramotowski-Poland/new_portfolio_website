@@ -1,0 +1,39 @@
+@use "../breakpoints" as bp;
+@use "../colors" as co;
+
+$from-side: calc(((100% - 30rem) / 2) + 0.5rem);
+$from-side-md: calc(((100% - 30rem) / 2) - 17rem);
+$from-side-sm: calc(((100% - 30rem) / 2) - 10rem);
+
+%icon {
+  color: co.$primary;
+  font-size: 5rem;
+  position: absolute;
+  bottom: 18.5rem;
+  @include bp.sm {
+    bottom: 24rem;
+    font-size: 8rem;
+  }
+}
+
+.icon_left {
+  @extend %icon;
+  left: $from-side;
+  @include bp.sm {
+    left: $from-side-sm;
+  }
+  @include bp.md {
+    left: $from-side-md;
+  }
+}
+
+.icon_right {
+  @extend %icon;
+  right: $from-side;
+  @include bp.sm {
+    right: $from-side-sm;
+  }
+  @include bp.md {
+    right: $from-side-md;
+  }
+}

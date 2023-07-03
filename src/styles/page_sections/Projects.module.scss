@@ -1,0 +1,24 @@
+@use "../colors" as co;
+@use "../variables" as va;
+@use "../mixins" as mi;
+
+.input {
+  @include mi.button;
+
+  & option {
+    color: #fff;
+  }
+}
+
+.introduction {
+  @include mi.section-introduction-paragraph($margin-bottom: 0.5rem);
+}
+
+.menu {
+  margin-bottom: va.$sectionIntroduction-rest-gap - 1rem;
+}
+
+.projects {
+  margin-bottom: va.$section-bottom-margin;
+  position: relative;
+}

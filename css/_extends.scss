@@ -1,9 +1,0 @@
-@use "colors" as co;
-
-%link {
-  text-decoration: none;
-  color: co.$font-color;
-  &:hover {
-    cursor: pointer;
-  }
-}

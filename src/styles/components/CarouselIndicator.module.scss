@@ -1,0 +1,11 @@
+@use "../colors" as co;
+
+.active.indicator {
+  background-color: co.$primary;
+}
+
+.indicator {
+  background-color: co.$primary-light;
+  height: 1.5rem;
+  width: 6rem;
+}

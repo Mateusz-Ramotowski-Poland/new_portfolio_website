@@ -1,0 +1,67 @@
+@use "../breakpoints" as bp;
+@use "../colors" as co;
+@use "../mixins" as mi;
+@use "../variables" as va;
+
+$image-width-max: 75rem;
+$arrow-width-sm: 2.5rem;
+
+.button {
+  @include mi.button;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  height: 65.5rem;
+
+  @include bp.sm {
+    height: 69rem;
+  }
+
+  @include bp.md {
+    height: 67rem;
+  }
+}
+
+.description {
+  margin: 0 auto;
+  max-width: va.$max-text-width;
+  margin-bottom: 1rem;
+}
+
+.img {
+  height: 30rem;
+  margin-bottom: 2rem;
+  width: 100%;
+
+  @include bp.sm {
+    height: 40rem;
+  }
+
+  @include bp.md {
+    margin-left: calc(((100% - $image-width-max) / 2));
+    width: $image-width-max;
+  }
+}
+
+.info {
+  text-align: center;
+  font-weight: 600;
+}
+
+.title {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  width: calc(100% - (2 * $arrow-width-sm));
+
+  @include bp.sm {
+    font-size: 3rem;
+    width: 100%;
+  }
+}

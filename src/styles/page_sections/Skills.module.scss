@@ -1,0 +1,42 @@
+@use "../breakpoints" as bp;
+@use "../mixins" as mi;
+@use "../variables" as va;
+
+.button {
+  @include mi.button;
+  margin: 0;
+}
+
+.canvas {
+  width: 100%;
+
+  @include bp.md {
+    width: 90%;
+  }
+
+  @include bp.lg {
+    width: 80rem;
+  }
+}
+
+.canvas_container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.introduction {
+  @include mi.section-introduction-paragraph;
+}
+
+.menu {
+  text-align: center;
+}
+
+.skills {
+  margin-bottom: va.$section-bottom-margin;
+}
+
+.tagsList {
+  display: none;
+}

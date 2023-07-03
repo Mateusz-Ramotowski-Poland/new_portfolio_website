@@ -1,0 +1,116 @@
+@use "../breakpoints" as bp;
+@use "../colors" as co;
+@use "../mixins" as mi;
+@use "../variables" as va;
+
+$header-bottom-border: 2px solid co.$primary;
+
+%burger-line {
+  background: black;
+  height: 0.2rem;
+  transition: all 0.3s ease;
+  width: 3rem;
+}
+
+@mixin burger-top-bottom($top: 0.8rem) {
+  content: "";
+  left: 0;
+  position: absolute;
+  top: $top;
+}
+
+.header {
+  align-items: center;
+  background-color: #fff;
+  border-bottom: $header-bottom-border;
+  display: flex;
+  font-size: inherit;
+  min-height: 6rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  @include mi.container($padding-top-bottom: 1.5rem);
+
+  &.active {
+    border-bottom: none;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  &__links {
+    display: flex;
+  }
+
+  &__burger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    @include bp.lg {
+      display: none;
+    }
+
+    &.active & {
+      &__line {
+        background: transparent;
+
+        &::before {
+          top: 0;
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          top: 0;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    &.active ~ .nav__ul {
+      background: white;
+      border-bottom: $header-bottom-border;
+      display: block;
+      margin-left: -(va.$container-padding-small-screen);
+      position: absolute;
+      text-align: center;
+      top: 5rem;
+      width: 100%;
+      z-index: 1;
+    }
+
+    &__line {
+      @extend %burger-line;
+      position: relative;
+
+      &::before {
+        @extend %burger-line;
+        @include burger-top-bottom;
+      }
+
+      &::after {
+        @extend %burger-line;
+        @include burger-top-bottom($top: -0.8rem);
+      }
+    }
+  }
+
+  &__ul {
+    display: none;
+    @include bp.lg {
+      display: flex;
+    }
+  }
+
+  &__li {
+    padding: 0.5rem;
+
+    &__link {
+      &:hover {
+        color: co.$primary;
+      }
+    }
+  }
+}
