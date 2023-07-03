@@ -13,13 +13,17 @@ export const ContactForm = () => {
   const [filesSize, setFilesSize] = useState(0); // google set atachments limit as 25 MB. I set 24MB limit in my app
   const [isSendindForm, setIsSendindForm] = useState(false);
   const [deliveryStatus, setDeliveryStatus] = useState<string | null>(null);
-  const nieDostarczono = "Nie dostarczono wiadomości. Spróbuj ponownie za kilka minut";
+  const nieDostarczono = "Message not delivered. Please try again in a few minutes";
 
   const handleClick = () => {
     setDeliveryStatus(null);
   };
 
-  const handleInput = (event: any) => {
+  const handleFileButton = () => {
+    (document.getElementById("plik") as HTMLInputElement).click();
+  };
+
+  const handleFileInput = (event: any) => {
     const files: File[] = event.target.files;
     let filesSize = 0;
     if (files.length !== 0) {
@@ -47,7 +51,7 @@ export const ContactForm = () => {
       .then((res) => res.json())
       .then((body) => {
         if (body.accepted[0] === "ramotOgrody@gmail.com") {
-          setDeliveryStatus("Dostarczono wiadomość");
+          setDeliveryStatus("Message delivered");
         } else {
           setDeliveryStatus(nieDostarczono);
         }
@@ -97,7 +101,8 @@ export const ContactForm = () => {
       </div>
       <div className={styles.element}>
         <label htmlFor="plik"></label>
-        <input className={styles.input} id="plik" multiple name="files" type="file" onInput={handleInput}></input>
+        <input className="hidden" id="plik" multiple name="files" type="file" onInput={handleFileInput}></input>
+        <input type="button" id="loadFileXml" value="Load Files" onClick={handleFileButton} className={styles.input} />
       </div>
       <div className={styles.flex_container}>
         <p>* - required</p>
@@ -112,7 +117,7 @@ export const ContactForm = () => {
       </div>
       {isSendindForm && (
         <div className={styles.message_container}>
-          <img src={spinner} alt="spinner" className={styles.spinner}></img> <span>Wysyłam wiadomość. Proszę, poczekaj na potwierdzenie</span>
+          <img src={spinner} alt="spinner" className={styles.spinner}></img> <span>I'm sending a message. Please wait for confirmation</span>
         </div>
       )}
       {deliveryStatus && (
@@ -124,7 +129,7 @@ export const ContactForm = () => {
       {filesSize > 24 && (
         <div className={styles.message_container}>
           <IonIcon icon={alertCircleOutline} className={styles.failure_icon} />
-          <span>Przekroczono limit plików. Nie można wysłać wiadomości</span>
+          <span>File limit exceeded. The message could not be sent</span>
         </div>
       )}
     </form>

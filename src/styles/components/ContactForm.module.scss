@@ -1,12 +1,13 @@
 @use "../breakpoints" as bp;
 @use "../colors" as co;
+@use "../mixins" as mi;
 
 $bg-color: #fff;
 $gap-width: 1.5rem;
 
 @mixin shared {
   margin-bottom: $gap-width;
-  @include bp.lg {
+  @include bp.md {
     width: calc((100% - $gap-width) / 2);
   }
 }
@@ -34,12 +35,6 @@ $gap-width: 1.5rem;
   color: co.$failure;
 }
 
-::file-selector-button {
-  background-color: $bg-color;
-  border: none;
-  color: inherit;
-}
-
 .flex_container {
   @include shared;
   align-items: center;
@@ -53,12 +48,12 @@ $gap-width: 1.5rem;
 
 .form {
   background-color: co.$form-background;
-  border: 2px solid #eee;
+  border: 2px solid co.$form-background;
   border-radius: 1rem;
-  margin-bottom: 5rem;
+  margin: 3rem 0;
   padding: 3rem;
 
-  @include bp.lg {
+  @include bp.md {
     display: flex;
     flex-wrap: wrap;
     column-gap: $gap-width;
@@ -70,10 +65,7 @@ $gap-width: 1.5rem;
   width: 100%;
   background-color: $bg-color;
   padding: 1rem;
-  font-size: 1.6rem;
-  @include bp.sm {
-    font-size: 2rem;
-  }
+  text-align: left;
 
   &:hover,
   &:focus,
@@ -109,9 +101,8 @@ $gap-width: 1.5rem;
   @include shared;
 
   & button {
-    background-color: co.$primary;
-    border: 2px solid co.$form-background;
-    color: #fff;
+    @include mi.button;
+    width: max-content;
   }
 }
 
@@ -122,11 +113,11 @@ $gap-width: 1.5rem;
 
 .textarea {
   @include shared;
-  @include bp.lg {
+  @include bp.md {
     width: 100%;
   }
 
   & textarea {
-    height: 12rem;
+    height: 20rem;
   }
 }
