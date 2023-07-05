@@ -44,6 +44,7 @@ export const ContactForm = () => {
 
     const form = event.target as HTMLFormElement;
     const formData = new FormData(form);
+    formData.append("webpage", "portfolio"); //depending on the webpage value, the node.js server knows which gmail account to send the email to
     setDeliveryStatus(null);
     setIsSendindForm(true);
 
@@ -51,7 +52,7 @@ export const ContactForm = () => {
       .post(formData)
       .then((res) => res.json())
       .then((body) => {
-        if (body.accepted[0] === "ramotOgrody@gmail.com") {
+        if (body.accepted[0] === "mateusz.ramotowski.praca@gmail.com") {
           setDeliveryStatus("Message delivered");
         } else {
           setDeliveryStatus(nieDostarczono);
