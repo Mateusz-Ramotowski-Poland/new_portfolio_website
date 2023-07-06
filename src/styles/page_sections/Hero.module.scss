@@ -20,7 +20,7 @@
 
   &__container {
     bottom: 11rem;
-    color: white;
+    color: #fff;
     max-width: 100%;
     padding-left: 1rem;
     position: absolute;
@@ -69,7 +69,7 @@
     }
 
     & p {
-      color: white;
+      color: #fff;
       font-size: 2.4rem;
       letter-spacing: 0.2rem;
       @include bp.lg {
@@ -81,7 +81,7 @@
     }
 
     &__typed {
-      color: white;
+      color: #fff;
     }
   }
 }
