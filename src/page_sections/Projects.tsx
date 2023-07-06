@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { CarouselArrows, CarouselIndicators, ProjectsItem } from "../components";
 import styles from "../styles/page_sections/Projects.module.scss";
 import { Project } from "../shared";
@@ -29,14 +29,13 @@ export const Projects = () => {
     return projects;
   }
 
-  const handleClickTime = (event: React.MouseEvent) => {
-    setState(0);
-    setTime((event.target as HTMLSelectElement).value);
-  };
+  const handleClick = () => setState(0);
 
-  const handleClickTechnology = (event: React.MouseEvent) => {
-    setState(0);
+  const handleInputTechnology = (event: FormEvent<HTMLSelectElement>) => {
     setTechnology((event.target as HTMLSelectElement).value);
+  };
+  const handleInputTime = (event: FormEvent<HTMLSelectElement>) => {
+    setTime((event.target as HTMLSelectElement).value);
   };
 
   const filteredProjects = filterProjects(projects);
@@ -50,7 +49,7 @@ export const Projects = () => {
         Below are all the projects I've done since December 2021. I made all the projects myself - they are not projects from online tutorials.
       </p>
       <menu className={styles.menu}>
-        <select className={styles.input} onClick={handleClickTime}>
+        <select className={styles.input} onClick={handleClick} onInput={handleInputTime}>
           <option value="all">Whole time</option>
           <option value="IV/2023">IV-VIII 2023</option>
           <option value="XI/2022">XI 2022</option>
@@ -59,7 +58,7 @@ export const Projects = () => {
           <option value="III/2022">III-IV 2022</option>
           <option value="XII/2021">XII 2021</option>
         </select>
-        <select className={styles.input} onClick={handleClickTechnology}>
+        <select className={styles.input} onClick={handleClick} onInput={handleInputTechnology}>
           <option value="all">All technologies</option>
           <option value="react,ts">React, TypeScript</option>
           <option value="node">Node.js</option>
