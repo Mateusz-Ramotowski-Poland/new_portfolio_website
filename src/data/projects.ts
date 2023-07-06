@@ -1,17 +1,17 @@
-import projects1 from "../images/projects1.jpg";
-import projects2 from "../images/projects2.jpg";
-import projects3 from "../images/projects3.jpg";
-import projects4 from "../images/projects4.jpg";
-import projects5 from "../images/projects5.jpg";
-import projects6 from "../images/projects6.jpg";
-import projects7 from "../images/projects7.jpg";
-import projects8 from "../images/projects8.jpg";
-import projects9 from "../images/projects9.jpg";
-import projects10 from "../images/projects10.jpg";
-import projects11 from "../images/projects11.jpg";
-import projects12 from "../images/projects12.jpg";
-import projects13 from "../images/projects13.jpg";
-import projects14 from "../images/projects14.jpg";
+import projects1 from "../images/projects1.webp";
+import projects2 from "../images/projects2.webp";
+import projects3 from "../images/projects3.webp";
+import projects4 from "../images/projects4.webp";
+import projects5 from "../images/projects5.webp";
+import projects6 from "../images/projects6.webp";
+import projects7 from "../images/projects7.webp";
+import projects8 from "../images/projects8.webp";
+import projects9 from "../images/projects9.webp";
+import projects10 from "../images/projects10.webp";
+import projects11 from "../images/projects11.webp";
+import projects12 from "../images/projects12.webp";
+import projects13 from "../images/projects13.webp";
+import projects14 from "../images/projects14.webp";
 import { Project } from "../shared";
 
 export const projects: Project[] = [

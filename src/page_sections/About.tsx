@@ -11,8 +11,8 @@ import {
   logoJavascript,
   schoolOutline,
 } from "../../node_modules/ionicons/icons";
-import about1 from "../images/about1.jpg";
-import about2 from "../images/about2.jpg";
+import about1 from "../images/about1.webp";
+import about2 from "../images/about2.webp";
 
 export const About = () => {
   return (

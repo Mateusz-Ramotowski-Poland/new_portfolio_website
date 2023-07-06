@@ -1,8 +1,8 @@
 import styles from "../styles/components/TestimonialsOpinion.module.scss";
-import testimonials1 from "../images/testimonials1.jpg";
-import testimonials2 from "../images/testimonials2.jpg";
-import testimonials3 from "../images/testimonials3.jpg";
-import testimonials4 from "../images/testimonials4.jpg";
+import testimonials1 from "../images/testimonials1.webp";
+import testimonials2 from "../images/testimonials2.webp";
+import testimonials3 from "../images/testimonials3.webp";
+import testimonials4 from "../images/testimonials4.webp";
 
 interface Props {
   state: number;
