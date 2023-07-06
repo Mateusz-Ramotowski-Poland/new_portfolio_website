@@ -6,7 +6,7 @@
   background-size: cover;
   background-position: 83.5% 0%;
   height: 90rem;
-  margin-bottom: va.$section-bottom-margin;
+  padding-top: va.$section-padding-top;
   position: relative;
   @include bp.sm {
     background-position: 80% 30%;
