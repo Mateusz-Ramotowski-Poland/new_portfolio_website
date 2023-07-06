@@ -45,8 +45,8 @@ export const About = () => {
             <p>
               Before becoming a programmer, I worked in technical professions as an electrician - working in production and in the design office,
               electrical fitter at the shipyard and automation engineer in the service department traveling around Poland. From October 2021 I decided
-              to become a frontend developer. Since then, I've been learning to program myself by creating my own applications and websites. At that
-              time I was employed for 7 months as a programmer.
+              to become a frontend developer. Since then, I've been learning to program by myself by creating my own applications and websites. At
+              that time I was employed for 7 months as a programmer.
             </p>
           </div>
           <img src={about2} alt="code" className={styles.img_small_screen}></img>
