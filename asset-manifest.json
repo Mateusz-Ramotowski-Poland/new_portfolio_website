@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio-webpage/static/css/main.34e44811.css",
-    "main.js": "/portfolio-webpage/static/js/main.1a42e356.js",
+    "main.js": "/portfolio-webpage/static/js/main.9429b217.js",
     "static/js/443.ea139147.chunk.js": "/portfolio-webpage/static/js/443.ea139147.chunk.js",
     "static/js/738.ad2a27f7.chunk.js": "/portfolio-webpage/static/js/738.ad2a27f7.chunk.js",
     "static/js/3.dfc1ac2f.chunk.js": "/portfolio-webpage/static/js/3.dfc1ac2f.chunk.js",
@@ -11,7 +11,7 @@
     "static/media/hero.jpg": "/portfolio-webpage/static/media/hero.5e74ed27914d3744a9c6.jpg",
     "static/media/projects3.jpg": "/portfolio-webpage/static/media/projects3.4dcd8d4128b0660871ef.jpg",
     "static/media/projects4.jpg": "/portfolio-webpage/static/media/projects4.4110e7a1465e52a8cd96.jpg",
-    "static/media/resume.pdf": "/portfolio-webpage/static/media/resume.2960d25991c32ba3e17b.pdf",
+    "static/media/resume.pdf": "/portfolio-webpage/static/media/resume.30554260dcd664160663.pdf",
     "static/media/projects11.jpg": "/portfolio-webpage/static/media/projects11.1ecb52a260eafc4b6409.jpg",
     "static/media/projects1.jpg": "/portfolio-webpage/static/media/projects1.82be9c9aa6e040d7a5cf.jpg",
     "static/media/projects2.jpg": "/portfolio-webpage/static/media/projects2.8dbed7c38196cd19346c.jpg",
@@ -32,7 +32,7 @@
     "static/media/testimonials4.jpg": "/portfolio-webpage/static/media/testimonials4.df1b8ab1ae9ed702d28f.jpg",
     "index.html": "/portfolio-webpage/index.html",
     "main.34e44811.css.map": "/portfolio-webpage/static/css/main.34e44811.css.map",
-    "main.1a42e356.js.map": "/portfolio-webpage/static/js/main.1a42e356.js.map",
+    "main.9429b217.js.map": "/portfolio-webpage/static/js/main.9429b217.js.map",
     "443.ea139147.chunk.js.map": "/portfolio-webpage/static/js/443.ea139147.chunk.js.map",
     "738.ad2a27f7.chunk.js.map": "/portfolio-webpage/static/js/738.ad2a27f7.chunk.js.map",
     "3.dfc1ac2f.chunk.js.map": "/portfolio-webpage/static/js/3.dfc1ac2f.chunk.js.map",
@@ -41,6 +41,6 @@
   },
   "entrypoints": [
     "static/css/main.34e44811.css",
-    "static/js/main.1a42e356.js"
+    "static/js/main.9429b217.js"
   ]
 }
