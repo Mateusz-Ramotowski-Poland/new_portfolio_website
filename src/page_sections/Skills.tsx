@@ -46,7 +46,7 @@ export const Skills = () => {
       <p className={styles.introduction}>
         Since October 2021, I have been using the following technologies. You can check the <a href="#projects">projects section below </a>
         or my{" "}
-        <a href="https://github.com/Mateusz-Ramotowski-Poland" target="_blank">
+        <a href="https://github.com/Mateusz-Ramotowski-Poland" target="_blank" rel="noopener noreferrer">
           GitHub
         </a>{" "}
         to see in which projects I was using these technologies.

@@ -66,7 +66,7 @@ export const Header = () => {
               </a>
             </li>
             <li className={styles.nav__li}>
-              <a className={styles.nav__li__link} href={pdf} target="_blank">
+              <a className={styles.nav__li__link} href={pdf} target="_blank" rel="noopener noreferrer">
                 Resume
               </a>
             </li>

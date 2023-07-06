@@ -16,11 +16,11 @@ export const ProjectsItem = (props: Props) => {
       <h3 className={styles.title}>{props.project.title}</h3>
       <p className={styles.description}>{props.project.description}</p>
       <div className={styles.buttons}>
-        <a href={props.project.urlGithub} target="_blank" className={styles.button}>
+        <a href={props.project.urlGithub} target="_blank" rel="noopener noreferrer" className={styles.button}>
           Github
         </a>
         {props.project.urlLive && (
-          <a href={props.project.urlLive} target="_blank" className={styles.button}>
+          <a href={props.project.urlLive} target="_blank" rel="noopener noreferrer" className={styles.button}>
             Live demo
           </a>
         )}
