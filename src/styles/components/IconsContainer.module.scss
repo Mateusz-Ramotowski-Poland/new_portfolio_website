@@ -3,10 +3,10 @@
 $font-size: 3rem;
 
 .icon {
-  color: #000;
+  color: co.$primary;
   font-size: $font-size;
   &:hover {
-    color: co.$primary;
+    color: co.$primary-darker;
   }
 }
 

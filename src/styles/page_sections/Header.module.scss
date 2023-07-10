@@ -106,11 +106,5 @@ $header-bottom-border: 2px solid co.$primary;
 
   &__li {
     padding: 0.5rem;
-
-    &__link {
-      &:hover {
-        color: co.$primary;
-      }
-    }
   }
 }
