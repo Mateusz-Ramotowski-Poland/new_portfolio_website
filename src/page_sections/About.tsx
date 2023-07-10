@@ -27,10 +27,10 @@ export const About = () => {
               <IonIcon icon={schoolOutline} className={styles.icon} />
             </div>
             <p>
-              I was born and raised in Masuria. Thanks to my strict mind, in Gdańsk, I obtained the title of electronics technician and a master's
+              I was born and raised in Masuria. Thanks to my technical mind, in Gdańsk, I obtained the title of electronics technician and a master's
               degree in automation and robotics. I wrote my first computer program in 2013 programming PLC controller. During my studies, I learned
-              the basics of several programming languages: Python, C, C++, PHP, JS, HTML, CSS, Matlab and used MySQL and MongoDB databases. My 2
-              diploma theses consisted in creating and describing the operation of computer programs.
+              the basics of several programming languages: Python, C, C++, PHP, JS, HTML, CSS, Matlab and used MySQL and MongoDB databases. My two
+              diploma thesis focused on creating and describing the operation of computer programs.
             </p>
           </div>
           <img src={about1} alt="coding" className={styles.img_small_screen}></img>
@@ -43,7 +43,7 @@ export const About = () => {
               <IonIcon icon={desktopOutline} className={styles.icon} />
             </div>
             <p>
-              Before becoming a programmer, I worked in technical professions as an electrician - working in production and in the design office,
+              Before becoming a programmer, I worked in technical professions as an electrician - working both in production and in the design office,
               electrical fitter at the shipyard and automation engineer in the service department traveling around Poland. From October 2021 I decided
               to become a frontend developer. Since then, I've been learning to program by myself by creating my own applications and websites. At
               that time I was employed for 7 months as a programmer.

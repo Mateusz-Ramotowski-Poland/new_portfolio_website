@@ -46,7 +46,8 @@ export const Projects = () => {
     <section id="projects" className={styles.projects}>
       <h2>Projects</h2>
       <p className={styles.introduction}>
-        Below are all the projects I've done since December 2021. I made all the projects myself - they are not projects from online tutorials.
+        Below you can find all the projects I've done since December 2021. I made all of these projects myself - they are not projects from online
+        tutorials.
       </p>
       <menu className={styles.menu}>
         <select className={styles.input} onClick={handleClick} onInput={handleInputTime}>
