@@ -16,7 +16,8 @@ import { Project } from "../shared";
 
 export const projects: Project[] = [
   {
-    description: "This is my first freelancing project. The company's website consists of several subpages. The project is in progress.",
+    description:
+      "This is my first freelancing project. The company's website consists of several subpages. The website is made for the Ramot Ogrody company, which mainly deals with mountaineering tree felling, tree care, sale of firewood, and garden maintenance.",
     technologyFilter: "react,ts",
     timeFilter: "IV/2023",
     title: "Ramot ogrody",
