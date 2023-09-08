@@ -43,10 +43,9 @@ export const About = () => {
               <IonIcon icon={desktopOutline} className={styles.icon} />
             </div>
             <p>
-              Before becoming a programmer, I worked in technical professions as an electrician - working both in production and in the design office,
-              electrical fitter at the shipyard and automation engineer in the service department traveling around Poland. From October 2021 I decided
-              to become a frontend developer. Since then, I've been learning to program by myself by creating my own applications and websites. At
-              that time I was employed for 7 months as a programmer.
+              I worked in technical professions: as a programmer, as an electrician - working both in the design office and in production, electrical
+              fitter at the shipyard and automation engineer in the service department traveling around Poland. Since October 2021 I've been learning
+              to program by myself by creating my own applications and websites.
             </p>
           </div>
           <img src={about2} alt="code" className={styles.img_small_screen}></img>
@@ -59,7 +58,7 @@ export const About = () => {
             </div>
             <p>
               I like creating websites. It gives me joy to see a good, responsive website that I created after many hours of writing and debugging the
-              code. In my free time, I like physical activity. I also love strategy board games and books.
+              code. In my free time, I like physical activity -swimming and cycling. I also love strategy board games and books.
             </p>
           </div>
         </div>
